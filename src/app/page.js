@@ -1,8 +1,16 @@
+import Image from "next/image";
+
 export default function Home() {
     return (
-        <main className="flex-grow text-center p-10 text-sm sm:text-md md:text-lg lg:text-xl">
-            <h1 className="capitalize text-2xl font-semibold">Welcome to da website</h1>
-            <p className="mt-4 text-lg font-light text-orange-500">Ini adalah platform untuk mengurangi limbah fashon dengan melakukan transaksi untuk memperpanjang siklus pakaian</p>
-        </main>
+       <div>
+            <div className="w-full h-[28rem] relative">
+                    <Image src={"/images/background-content.jpg"} alt="gambar fashion" width={1000} height={1000} priority className="w-full h-[28rem] object-cover object-top"></Image>
+                    <div className="w-full h-[28rem] inset-0 absolute grid place-items-center black-transparent-background">
+                        <h1 className="font-bold text-5xl font-sans tracking-widest text-white">
+                            WELCOME
+                        </h1>
+                    </div>
+            </div>
+       </div>
     )
 }
