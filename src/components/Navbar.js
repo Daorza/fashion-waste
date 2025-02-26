@@ -1,7 +1,7 @@
 import Link from "next/link";
 export default function Navbar() {
     return (
-        <nav className="shadow-md fixed w-full">
+        <nav className="shadow-md fixed w-full z-50">
             <div className="flex justify-between items-center h-16 px-4 text-black bg-white">
                 <div className="md:hidden">
                     <a>
@@ -12,13 +12,13 @@ export default function Navbar() {
                     </a>
                 </div>
                 <div className="flex justify-center gap-12 items-center">
-                    <a className="font-bold text-2xl font-sans ">
+                    <Link href="/" className="font-bold text-2xl font-sans ">
                         FASHION WASTE
-                    </a>
-                    <div className="md:flex hidden justify-start items-center gap-8 mt-1 font-light">
-                        <a>SHOP</a>
-                        <a>ABOUT</a>
-                        <a>STORES</a>
+                    </Link>
+                    <div className="md:flex hidden justify-start items-center gap-8 mt-1 font-extralight text-sm uppercase">
+                        <Link href="/">SHOP</Link>
+                        <Link href="/about">ABOUT</Link>
+                        <Link href="/marketplace">Marketplace</Link>
                     </div>
                 </div>
                 <div className="flex justify-end md:gap-6 gap-2">
