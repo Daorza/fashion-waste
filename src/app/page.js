@@ -2,7 +2,7 @@
 import Image from "next/image";
 import LandingLayout from "@/components/layout/LandingLayout";
 import { useEffect, useState } from "react";
-
+import Link from "next/link";
 const Home = () => {
     const [isAnimated, setIsAnimated] = useState(false);
 
@@ -38,12 +38,12 @@ const Home = () => {
                             <h2 className="text-white text-md md:text-lg uppercase tracking-widest font-medium md:text-right text-center">
                                 Sustainable | Reduceable | Reuseable
                             </h2>
-                            <a
+                            <Link
                                 href="/"
                                 className="px-8 py-2 bg-graphite text-white text-md rounded-md shadow font-semibold uppercase tracking-widest w-fit"
                             >
                                 See All Products
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>
