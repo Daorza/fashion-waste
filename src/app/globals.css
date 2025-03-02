@@ -10,7 +10,9 @@
   --brick: #ee7828;
   --graphite: #2c2c2c;
 }
-
+::-webkit-scrollbar{
+  display: none;
+}
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -25,11 +27,11 @@ body {
 }
 .black-transparent-background{
   /* From https://css.glass */
-   background: rgba(0, 0, 0, 0.15);
+   background: rgba(0, 0, 0, 0.2);
    /* border-radius: 16px; */
    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-   backdrop-filter: blur(3.3px);
-   -webkit-backdrop-filter: blur(3.3px);
+   backdrop-filter: blur(3.0px);
+   -webkit-backdrop-filter: blur(3.0px);
    border: 1px solid rgba(0, 0, 0, 0.3);
    border: 1px solid rgba(0, 0, 0, 0.3);
    height: 100%;

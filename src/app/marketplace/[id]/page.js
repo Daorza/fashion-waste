@@ -21,7 +21,7 @@ export default function ProductDetail({params}) {
 
     return (
         <div>
-            <img src={product.image} alt={product.name} className="w-full h-64 object-cover rounded-md" />
+            <Image src={product.image} alt={product.name} width={1000} height={1000} className="w-full h-64 object-cover rounded-md" />
             <h1 className="text-2xl font-bold mt-4">{product.name}</h1>
             <p className="text-lg text-gray-700 mt-2">{product.description}</p>
             <p className="text-xl font-semibold mt-2">{product.price}</p>

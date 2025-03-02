@@ -1,8 +1,24 @@
+"use client"
 import Link from "next/link";
+import { useEffect, useState } from "react";
 export default function Navbar() {
+    const [scrollPosition, setScrollPosition] = useState(0)
+    useEffect(() => {
+        window.addEventListener('scroll', function() {
+            const scrollTop = window.scrollY || document.documentElement.scrollTop;
+            setScrollPosition(scrollTop)
+            // const documentHeight = document.documentElement.scrollHeight;
+            // const viewportHeight = window.innerHeight;
+            // Contoh: Deteksi apakah pengguna sudah mencapai bagian bawah halaman
+            // if (scrollTop + viewportHeight >= documentHeight) {
+            //     console.log("Anda telah mencapai bagian bawah halaman!");
+            // }
+        });
+    }, [scrollPosition])
+    
     return (
-        <nav className="shadow-md fixed w-full z-50">
-            <div className="flex justify-between items-center h-16 px-4 text-black bg-white">
+        <nav className={`fixed w-full z-50 ${scrollPosition>10?"shadow-md":"shadow-none"}`} >
+            <div className={`flex justify-between items-center h-16 px-4  delay-200 transition-opacity ease-in-out ${scrollPosition>10?"bg-white text-black":"bg-transparent text-white"} hover:bg-white  hover:text-black`}>
                 <div className="md:hidden">
                     <a>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
