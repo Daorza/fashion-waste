@@ -1,24 +1,23 @@
-export async function generateParams() {
-    const products = [
-        {id: "1"},
-        {id: "2"},
-    ]
+import { notFound } from "next/navigation";
 
-    return products.map((product) => ({
-        id: product.id,
-    }))
+const products = [
+    {id: "1", name: "Oversize T-shirt", price: "Rp50.000", image: "/t-shirt.jpg", description: "Oversize T-shirt, perfect shoulder cut."},
+    {id: "2", name: "Premium Polo Shirt", price: "Rp125.000", image: "/polo.jpg", description: "Premium Polo Shirt, water resist."},
+];
+
+export async function generateStaticParams() {
+    return products.map((product) => ({id: product.id}));
 }
-export default  function ProductDetail({params}) {
-    const { id } = params;
+export default function ProductDetail({params}) {
+    if (!params?.id) return notFound();
 
-    const products = [
-        {id: "1", name: "Oversize T-shirt", price: "Rp50.000", image: "/t-shirt.jpg", description: "Oversize T-shirt, perfect shoulder cut."},
-        {id: "2", name: "Premium Polo Shirt", price: "Rp125.000", image: "/polo.jpg", description: "Premium Polo Shirt, water resist."},
-    ];
+    const product = products.find((item) => item.id === params.id);
 
-    const product = products.find((item) => item.id === id);
+    if (!product) {
+        return notFound();
+    }
     
-    if(!product) return <p className="text-center mt-4">Produk tidak ditemukan.</p>;
+    // if(!product) return <p className="text-center mt-4">Produk tidak ditemukan.</p>;
 
     return (
         <div>
