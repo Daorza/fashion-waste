@@ -23,9 +23,9 @@ export default function Marketplace() {
                 <option value="Denim">Denim</option>
             </select>
 
-            <div>
+            <div className="grid grid-cols-2 gap-4">
                 {filteredProducts.map((product) => (
-                    <Link key={product.id} href={'/marketplace/${product.id'} className="border px-6 py-4 rounded-md">
+                    <Link key={product.id} href={'/marketplace/${product.id}'} className="border px-6 py-4 rounded-md">
                         <img src={product.image} alt={product.name} className="w-full h-40 object-cover rounded-md" />
                         <p className="text-xl font-semibold mt-2">{product.name}</p>
                         <p className="text-gray-700">{product.price}</p>
