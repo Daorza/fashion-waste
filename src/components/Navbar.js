@@ -32,7 +32,7 @@ export default function Navbar() {
                         FASHION WASTE
                     </Link>
                     <div className="md:flex hidden justify-start items-center gap-8 mt-1 font-extralight text-sm uppercase">
-                        <Link href="/">SHOP</Link>
+                        <Link href="/">-</Link>
                         <Link href="/about">ABOUT</Link>
                         <Link href="/marketplace">Marketplace</Link>
                     </div>

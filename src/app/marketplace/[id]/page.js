@@ -1,16 +1,18 @@
 import { notFound } from "next/navigation";
+import Image from "next/image";
 
 const products = [
     {id: "1", name: "Oversize T-shirt", price: "Rp50.000", image: "/t-shirt.jpg", description: "Oversize T-shirt, perfect shoulder cut."},
     {id: "2", name: "Premium Polo Shirt", price: "Rp125.000", image: "/polo.jpg", description: "Premium Polo Shirt, water resist."},
 ];
 
-export async function generateStaticParams() {
-    return products.map((product) => ({id: product.id}));
-}
-export default function ProductDetail({params}) {
-    if (!params?.id) return notFound();
+export default async function ProductDetail({params}) {
+    if (!params || !params.id) {
+        console.error("Error: params undefined atau params.id tidak tersedia", params);
+        return notFound();
+    }
 
+    const id = decodeURIComponent(params.id);
     const product = products.find((item) => item.id === params.id);
 
     if (!product) {
