@@ -6,11 +6,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
     return (
-        <html lang="id">
-            <body className="min-h-screen flex flex-col bg-white">
-                <main>                    
-                    {children}
-                </main>
+        <html>
+            <body className="min-h-screen bg-white">
+                    <main>                    
+                        {children}
+                    </main>
             </body>
         </html>
     );

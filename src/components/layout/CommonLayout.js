@@ -1,14 +1,13 @@
-
-import Navbar from "@/components/Navbar";
+import NavbarCommon from "@/components/Navbar";
 import Footer from "@/components/Footer";
 export default function CommonLayout({ children }) {
     return (
        <>
-       <Navbar />
                 <main>                    
+        <NavbarCommon />
                     {children}
                 </main>
-                <Footer />
+        <Footer />
        </>
           
     );
