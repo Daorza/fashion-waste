@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import LandingLayout from "@/components/layout/LandingLayout";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import SalesValueCard from "../components/SalesValueCard";
@@ -14,7 +13,6 @@ const Home = () => {
     }, []);
 
     return (
-        <LandingLayout>
             <div className="flex flex-col items-center justify-center">
                 {/* Section 1: Hero Background */}
                 <div className="w-full h-dvh relative">
@@ -144,7 +142,6 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-        </LandingLayout>
     );
 };
 

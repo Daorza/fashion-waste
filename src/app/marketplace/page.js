@@ -2,7 +2,6 @@
 import Image from "next/image";
 import { useState  } from "react";
 import Link from "next/link";
-import CommonLayout from "@/components/layout/CommonLayout";
 
 const products = [
     {id: "1", name: "Oversize T-shirt", price: "Rp50.000", image: "/models/models1.jpg", category: "Oversize" },
@@ -17,7 +16,6 @@ export default function Marketplace() {
     const filteredProducts = category === "All" ? products : products.filter((p) => p.category === category);
 
     return (
-        <CommonLayout>
             <div className="w-full mx-auto px-8 py-6 min-h-dvh">
                 <h1 className="text-3xl font-bold mb-4 uppercase text-center py-4">Buy or trade? its your choice!</h1>
                 <div className="grid grid-cols-5 mt-4">
@@ -45,6 +43,5 @@ export default function Marketplace() {
                 </div>
                 
             </div>
-        </CommonLayout>
     )
 }
