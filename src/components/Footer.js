@@ -5,7 +5,7 @@ export default function Footer() {
         <footer className="bg-graphite text-amber-50 text-center px-4 py-2 mt-8">
             <div className="grid grid-cols-2 gap-4 p-8">
                 <div>
-                    <p className="font-bold uppercase text-4xl text-left">fashion waste</p>
+                    <p className="font-bold uppercase text-4xl text-left">fastainable</p>
                     <p className="mt-4 text-left pr-8 text-sm tracking-wider">Media pengolahan limbah fashion. <br/> Perpanjang siklus fashion dan jauhi fast fashion untuk keberlanjutan lingkungan.</p>
                     <div className="px-4 py-2 mt-2 text-left space-x-8">
                         <a href="#">Instagram</a>
@@ -20,7 +20,7 @@ export default function Footer() {
                         <Link href="/sell" className="hover:underline hover:font-medium">Sell</Link>
                     </div>
 
-                    <div className="grid grid-rows-3 capitalize text-left ml-2 w-min">
+                    <div className="grid grid-rows-3 capitalize text-left ml-2 w-max">
                         <a href="#" className="hover:underline hover:font-medium">FAQ </a>
                         <a href="#" className="hover:underline hover:font-medium">Privacy & Policy</a>
                         <a href="#" className="hover:underline hover:font-medium">Terms & Condition</a>

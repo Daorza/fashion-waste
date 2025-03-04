@@ -11,15 +11,58 @@ const products = [
     {id: "5", name: "Premium Polo Shirt", price: "Rp125.000", image: "/models/models2.jpg", category: "Polo" },
     {id: "6", name: "Denim pants", price: "Rp115.000", image: "/models/models3.jpg", category: "Denim" },
 ]
+
+const filterOptions = {
+    category: ["Oversize", "Polo", "Denim"],
+    size: ["S", "M", "L", "XL"],
+    material: ["Katun", "Denim", "Poliester"],
+    color: ["Hitam", "Putih", "Biru"],
+    fit: ["Slim", "Regular", "Loose"]
+};
+
 export default function Marketplace() {
-    const [category, setCategory] = useState("All");
-    const filteredProducts = category === "All" ? products : products.filter((p) => p.category === category);
+    // const [category, setCategory] = useState("All");
+    // const filteredProducts = category === "All" ? products : products.filter((p) => p.category === category);
+    const [filters, setFilters] = useState({
+        category: [],
+        size: [],
+        material: [],
+        color: [],
+        fit: []
+    });
+
+    const handleFilterChange = (filterType, value) => {
+        setFilters((prev) => {
+            const updatedFilter = prev[filterType].includes(value)
+                ? prev[filterType].filter((item) => item !== value)
+                : [...prev[filterType], value];
+            return { ...prev, [filterType]: updatedFilter };
+        });
+    };
+
+    const clearFilters = () => {
+        setFilters({
+            category: [],
+            size: [],
+            material: [],
+            color: [],
+            fit: []
+        });
+    };
+
+    const filteredProducts = products.filter((p) =>
+        (filters.category.length === 0 || filters.category.includes(p.category)) &&
+        (filters.size.length === 0 || filters.size.includes(p.size)) &&
+        (filters.material.length === 0 || filters.material.includes(p.material)) &&
+        (filters.color.length === 0 || filters.color.includes(p.color)) &&
+        (filters.fit.length === 0 || filters.fit.includes(p.fit))
+    );
 
     return (
             <div className="w-full mx-auto px-8 py-6 min-h-dvh">
                 <h1 className="text-3xl font-bold mb-4 uppercase text-center py-4">Buy or trade? its your choice!</h1>
                 <div className="grid grid-cols-5 mt-4">
-                    <div className="h-max m-2 shadow-md rounded-md px-4 py-2  bg-white">
+                    {/* <div className="h-max m-2 shadow-md rounded-md px-4 py-2  bg-white">
                         <h1 className="text-lg font-semibold ">Filter Products</h1>
                         <select onChange={(e) => setCategory(e.target.value)} className="px-4 py-2 border rounded my-4 ">
                             <option value="All">Semua Kategori</option>
@@ -27,9 +70,45 @@ export default function Marketplace() {
                             <option value="Polo">Polo</option>
                             <option value="Denim">Denim</option>
                         </select>
+                    </div> */}
+                    <div>
+                        <div className="h-max m-2 shadow-md rounded-md px-4 py-2 bg-white static">
+                            <h1 className="text-lg font-semibold">Filter Products</h1>
+
+                            {Object.keys(filterOptions).map((filterType) => (
+                                <div key={filterType} className="my-2">
+                                    <h2 className="text-md font-semibold capitalize">{filterType}</h2>
+                                    {filterOptions[filterType].map((value) => (
+                                        <label key={value} className="block">
+                                            <input
+                                                type="checkbox"
+                                                checked={filters[filterType].includes(value)}
+                                                onChange={() => handleFilterChange(filterType, value)}
+                                                className="mr-2"
+                                            />
+                                            {value}
+                                        </label>
+                                    ))}
+                            </div>
+                            ))}
+
+                            {/* Clear Filter Button */}
+                            <button
+                                onClick={clearFilters}
+                                className="w-full mt-4 bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition"
+                            >
+                                Clear Filters
+                            </button>
+                        </div>
+                        <div className="px-4 py-2 mt-4rounded-md shadow-md ">
+                            <p>Want to take a step to save the planet?</p>
+                            <div>
+                                Start to sell your second-hand clothing
+                            </div>
+                        </div>
                     </div>
 
-                    <div className="col-span-4">
+                    <div className="col-span-4 ml-4">
                         <div className="grid grid-cols-4 gap-4">
                             {filteredProducts.map((product) => (
                                 <Link key={product.id} href={`/marketplace/${product.id}`} className="border p-4 rounded-md shadow">

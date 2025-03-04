@@ -2,8 +2,12 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 
 const products = [
-    {id: "1", name: "Oversize T-shirt", price: "Rp50.000", image: "/t-shirt.jpg", description: "Oversize T-shirt, perfect shoulder cut."},
-    {id: "2", name: "Premium Polo Shirt", price: "Rp125.000", image: "/polo.jpg", description: "Premium Polo Shirt, water resist."},
+    {id: "1", name: "Oversize T-shirt", price: "Rp50.000", image: "/models/models1.jpg", description: "Oversize T-shirt, perfect shoulder cut."},
+    {id: "2", name: "Premium Polo Shirt", price: "Rp125.000", image: "/models/models2.jpg", description: "Premium Polo Shirt, water resist."},
+    {id: "3", name: "Oversize T-shirt", price: "Rp50.000", image: "/models/models3.jpg", description: "Oversize T-shirt, perfect shoulder cut."},
+    {id: "4", name: "Premium Polo Shirt", price: "Rp125.000", image: "/models/models1.jpg", description: "Premium Polo Shirt, water resist."},
+    {id: "5", name: "Oversize T-shirt", price: "Rp50.000", image: "/models/models2.jpg", description: "Oversize T-shirt, perfect shoulder cut."},
+    {id: "6", name: "Premium Polo Shirt", price: "Rp125.000", image: "/models/models3.jpg", description: "Premium Polo Shirt, water resist."},
 ];
 
 export default async function ProductDetail({params}) {
