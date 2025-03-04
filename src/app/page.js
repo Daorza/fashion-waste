@@ -49,7 +49,7 @@ const Home = () => {
                 </div>
 
                 {/* Section 2: White Section */}
-                <div className="w-full max-w-7xl h-[16rem] bg-white flex justify-center items-center">
+                <div className="w-full max-w-7xl py-20 flex-col md:flex-row bg-white flex justify-center items-center">
                     <SalesValueCard icon={
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1" stroke="currentColor" className="size-16">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" />
@@ -80,7 +80,7 @@ const Home = () => {
                     <h1 className="tracking-widest text-2xl font-bold mb-8">
                         FRESH FROM THE FACTORY
                     </h1>
-                    <div className="grid grid-cols-4 gap-4 max-w-[92rem]">
+                    <div className="grid md:grid-cols-4 grid-cols-1 gap-4 max-w-[92rem]">
                         {/* grid items */}
                         <LandingProductCard
                             imgSrc={"/models/models6.jpg"}

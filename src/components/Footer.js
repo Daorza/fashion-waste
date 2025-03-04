@@ -20,7 +20,7 @@ export default function Footer() {
                         <Link href="/sell" className="hover:underline hover:font-medium">Sell</Link>
                     </div>
 
-                    <div className="grid grid-rows-3 capitalize text-left ml-2 w-max">
+                    <div className="grid grid-rows-3 capitalize text-left ml-2 w-min">
                         <a href="#" className="hover:underline hover:font-medium">FAQ </a>
                         <a href="#" className="hover:underline hover:font-medium">Privacy & Policy</a>
                         <a href="#" className="hover:underline hover:font-medium">Terms & Condition</a>
