@@ -3,10 +3,10 @@ import Footer from "@/components/Footer";
 export default function CommonLayout({ children }) {
     return (
        <>
-                <main>                    
         <NavbarCommon />
-                    {children}
-                </main>
+            <main>                    
+                {children}
+            </main>
         <Footer />
        </>
           

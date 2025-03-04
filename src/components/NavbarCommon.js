@@ -8,7 +8,7 @@ export default function NavbarCommon() {
                 
                 <div className="flex justify-center gap-12 items-center">
                     <Link href="/" className="font-bold text-2xl font-sans ">
-                        FASHION WASTE
+                        FASTAINABLE
                     </Link>
                     <div className="md:flex hidden justify-start items-center gap-8 mt-1 font-extralight text-sm uppercase">
                         <Link href="/marketplace">shop</Link>
