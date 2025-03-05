@@ -60,7 +60,26 @@ export default function Marketplace() {
 
     return (
             <div className="w-full mx-auto px-8 py-6 min-h-dvh">
-                <h1 className="text-3xl font-bold mb-4 uppercase text-center py-4">Buy or trade? its your choice!</h1>
+                <h1 className="text-3xl font-bold mb-4 uppercase text-center py-2">Buy or trade? its your choice!</h1>
+
+                <div className="flex pb-4">
+                    <div className="mx-2 px-4 py-1 bg-graphite font-semibold border shadow rounded cursor-pointer select-none text-white">
+                       All
+                    </div>
+                    <div className="mx-2 px-4 py-1 bg-gray-100 font-medium border shadow rounded cursor-pointer select-none text-graphite
+                     active:bg-graphite active:text-white active:font-semibold">
+                       Menswear
+                    </div>
+                    <div className="mx-2 px-4 py-1 bg-gray-100 font-medium border shadow rounded cursor-pointer select-none text-graphite
+                     active:bg-graphite active:text-white active:font-semibold">
+                       Womenswear
+                    </div>
+                    <div className="mx-2 px-4 py-1 bg-gray-100 font-medium border shadow rounded cursor-pointer select-none text-graphite
+                     active:bg-graphite active:text-white active:font-semibold">
+                       Accessories
+                    </div>
+                </div>
+
                 <div className="grid grid-cols-5 mt-4">
                     {/* <div className="h-max m-2 shadow-md rounded-md px-4 py-2  bg-white">
                         <h1 className="text-lg font-semibold ">Filter Products</h1>
@@ -74,10 +93,11 @@ export default function Marketplace() {
                     <div>
                         <div className="h-max m-2 shadow-md rounded-md px-4 py-2 bg-white static">
                             <h1 className="text-lg font-semibold">Filter Products</h1>
+                            <hr className="h-px my-2" />
 
                             {Object.keys(filterOptions).map((filterType) => (
                                 <div key={filterType} className="my-2">
-                                    <h2 className="text-md font-semibold capitalize">{filterType}</h2>
+                                    <h2 className="text-base font-semibold capitalize py-2">{filterType}</h2>
                                     {filterOptions[filterType].map((value) => (
                                         <label key={value} className="block">
                                             <input
@@ -89,21 +109,26 @@ export default function Marketplace() {
                                             {value}
                                         </label>
                                     ))}
+                                <hr className="h-px my-2" />
                             </div>
                             ))}
 
                             {/* Clear Filter Button */}
                             <button
                                 onClick={clearFilters}
-                                className="w-full mt-4 bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition"
+                                className="w-full mt-4 bg-red-600 text-white px-4 py-2 rounded shadow hover:bg-red-700 transition"
                             >
                                 Clear Filters
                             </button>
                         </div>
-                        <div className="px-4 py-2 mt-4rounded-md shadow-md ">
-                            <p>Want to take a step to save the planet?</p>
-                            <div>
-                                Start to sell your second-hand clothing
+                        <div className="px-4 py-2 mt-8 rounded-md shadow-md ">
+                            <p className="text-lg font-semibold capitalize">take a step</p>
+                            <div className="text-sm mt-2">
+                                Start to sell your second-hand clothing at <span className="font-semibold">Fastainable!</span>
+                            </div>
+                            <hr className="h-px my-2" />
+                            <div >
+                                <Link href={'/marketplace/sell'} className="mt-2 py-2 font-medium text-sm underline underline-offset-2 hover:font-semibold">Sell your products</Link>
                             </div>
                         </div>
                     </div>
