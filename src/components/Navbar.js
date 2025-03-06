@@ -67,7 +67,8 @@ export default function Navbar() {
         {/* Ikon-Ikon */}
         <div className="flex justify-end md:gap-6 gap-2">
           {/* User Icon */}
-            <Link href= "/profile" className="cursor-pointer">
+            <Link href= "/seller_profile">
+                <button aria-label="User profile">
                     <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
