@@ -60,8 +60,6 @@ export default function Marketplace() {
 
     return (
             <div className="w-full mx-auto px-8 py-6 min-h-dvh">
-                <h1 className="text-3xl font-bold mb-4 uppercase text-center py-2">Buy or trade? its your choice!</h1>
-
                 <div className="flex pb-4">
                     <div className="mx-2 px-4 py-1 bg-graphite font-semibold border shadow rounded cursor-pointer select-none text-white">
                        All
@@ -81,17 +79,8 @@ export default function Marketplace() {
                 </div>
 
                 <div className="grid grid-cols-5 mt-4">
-                    {/* <div className="h-max m-2 shadow-md rounded-md px-4 py-2  bg-white">
-                        <h1 className="text-lg font-semibold ">Filter Products</h1>
-                        <select onChange={(e) => setCategory(e.target.value)} className="px-4 py-2 border rounded my-4 ">
-                            <option value="All">Semua Kategori</option>
-                            <option value="Oversize">Oversize</option>
-                            <option value="Polo">Polo</option>
-                            <option value="Denim">Denim</option>
-                        </select>
-                    </div> */}
                     <div>
-                        <div className="h-max m-2 shadow-md rounded-md px-4 py-2 bg-white static">
+                        <div className="h-max m-2 shadow-md rounded-md px-4 py-2 bg-gradient-to-br from-blue-50 to-purple-50 border border-blue-100">
                             <h1 className="text-lg font-semibold">Filter Products</h1>
                             <hr className="h-px my-2" />
 
@@ -116,12 +105,12 @@ export default function Marketplace() {
                             {/* Clear Filter Button */}
                             <button
                                 onClick={clearFilters}
-                                className="w-full mt-4 bg-red-600 text-white px-4 py-2 rounded shadow hover:bg-red-700 transition"
+                                className="w-full mt-4 bg-red-500 text-white px-4 py-2 rounded shadow hover:bg-red-700 transition"
                             >
                                 Clear Filters
                             </button>
                         </div>
-                        <div className="px-4 py-2 mt-8 rounded-md shadow-md ">
+                        <div className="h-max m-2 px-4 py-2 mt-8 rounded-md shadow-md bg-gradient-to-br from-blue-50 to-purple-50 border border-blue-100">
                             <p className="text-lg font-semibold capitalize">take a step</p>
                             <div className="text-sm mt-2">
                                 Start to sell your second-hand clothing at <span className="font-semibold">Fastainable!</span>
@@ -134,10 +123,10 @@ export default function Marketplace() {
                     </div>
 
                     <div className="col-span-4 ml-4">
-                        <div className="grid grid-cols-4 gap-4">
+                        <div className="grid grid-cols-4 gap-4 ">
                             {filteredProducts.map((product) => (
-                                <Link key={product.id} href={`/marketplace/${product.id}`} className="border p-4 rounded-md shadow">
-                                    <img src={product.image} alt={product.name} className="w-max object-cover rounded-md" />
+                                <Link key={product.id} href={`/marketplace/${product.id}`} className="p-4 rounded-md shadow bg-gray-100 border-gray-500">
+                                    <img src={product.image} alt={product.name} className="w-max object-cover rounded-md shadow" />
                                     <p className="text-xl font-semibold mt-2">{product.name}</p>
                                     <p className="text-gray-700 text-right">{product.price}</p>
                                 </Link>
