@@ -1,39 +1,81 @@
 "use client";
 
+import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 
-export default function SellPage() {
-    const [form, setForm] = useState({
+export default function SellProductForm() {
+    const [formData, setFormData] = useState({
         name: "",
         price: "",
-        description: "",
-        category: "Jual",
+        category: "",
+        size: "",
+        material: "",
+        color: "",
+        fit: "",
+        image: null,
     });
 
     const handleChange = (e) => {
-        setForm({ ...form, [e.target.name]: e.target.value });
+        const { name, value } = e.target;
+        setFormData({ ...formData, [name]: value });
     };
-    
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        alert('Produk ${form.name} berhasil ditambahkan!');
+
+    const handleFileChange = (e) => {
+        setFormData({ ...formData, image: e.target.files[0] });
     };
 
     return (
-        <div className="w-fit mx-auto px-8 py-6">
-            <h1 className="text-xl font-bold mb-4">Jual atau Tukar Pakaian</h1>
-            <form onSubmit={handleSubmit} className="space-y-4">
-                <input type="text" name="name" placeholder="Nama Produk" required className="w-full px-4 py-2 border rounded" onChange={handleChange} />
-                <input type="text" name="price" placeholder="Harga Produk" className="w-full px-4 py-2 border rounded" onChange={handleChange} />
-
-                <textarea name="description" placeholder="Deskripsi Produk" required className="w-full px-4 py-2 border rounded" onChange={handleChange}></textarea>
-
-                <select name="category" className="w-full px-4 py-2 border rounded" onChange={handleChange}>
-                    <option value="Jual">Jual</option>
-                    <option value="Tukar">Tukar</option>
-                </select>
-                <button type="submit" className="w-full bg-brick px-8 py-4 text-white font-semibold text-md">Submit</button>
+        <main className="max-w-4xl mx-auto my-8 p-8 bg-white shadow-md rounded-md">
+            <h1 className="text-xl font-bold text-center mb-6">Sell Your Product</h1>
+            <hr className="h-px my-4" />
+            <form className="grid grid-cols-2 gap-4">
+                <div>
+                    <label className="block font-semibold">Product Name</label>
+                    <input type="text" name="name" value={formData.name} onChange={handleChange} className="w-full border rounded px-3 py-2 mt-1" required />
+                </div>
+                <div>
+                    <label className="block font-semibold">Price</label>
+                    <input type="text" name="price" value={formData.price} onChange={handleChange} className="w-full border rounded px-3 py-2 mt-1" required />
+                </div>
+                <div>
+                    <label className="block font-semibold">Category</label>
+                    <select name="category" value={formData.category} onChange={handleChange} className="w-full border rounded px-3 py-2 mt-1">
+                        <option value="">Select Category</option>
+                        <option value="Oversize">Oversize</option>
+                        <option value="Polo">Polo</option>
+                        <option value="Denim">Denim</option>
+                    </select>
+                </div>
+                <div>
+                    <label className="block font-semibold">Size</label>
+                    <input type="text" name="size" value={formData.size} onChange={handleChange} className="w-full border rounded px-3 py-2 mt-1" />
+                </div>
+                <div>
+                    <label className="block font-semibold">Material</label>
+                    <input type="text" name="material" value={formData.material} onChange={handleChange} className="w-full border rounded px-3 py-2 mt-1" />
+                </div>
+                <div>
+                    <label className="block font-semibold">Color</label>
+                    <input type="text" name="color" value={formData.color} onChange={handleChange} className="w-full border rounded px-3 py-2 mt-1" />
+                </div>
+                <div>
+                    <label className="block font-semibold">Fit</label>
+                    <select name="fit" value={formData.fit} onChange={handleChange} className="w-full border rounded px-3 py-2 mt-1">
+                        <option value="">Select Fit</option>
+                        <option value="Slim">Slim</option>
+                        <option value="Regular">Regular</option>
+                        <option value="Loose">Loose</option>
+                    </select>
+                </div>
+                <div>
+                    <label className="block font-semibold">Upload Image</label>
+                    <input type="file" onChange={handleFileChange} className="w-full border rounded px-3 py-2 mt-1" />
+                </div>
+                <div className="col-span-2 text-center mt-4">
+                    <Link href="/seller_profile" className="bg-black text-white px-8 py-3 rounded-md font-semibold hover:bg-gray-800">Submit</Link>
+                </div>
             </form>
-        </div>
+        </main>
     );
 }
