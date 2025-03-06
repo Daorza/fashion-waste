@@ -69,7 +69,7 @@ export default function ProductDetail() {
                 </div>
             </div>
 
-            <div className="mt-6 p-4 rounded-sm shadow-md bg-gradient-to-br from-blue-50 to-purple-50 border border-blue-100">
+            <div className="mt-6 p-4 rounded-sm shadow-md bg-gray-50">
                 <div>
                     <h1 className=" font-semibold mb-4">Want to trade your own clothes with this one?</h1>
                     <p>You can trade your own clothes with this one. Fill the form on the link below to start the trade.</p>
