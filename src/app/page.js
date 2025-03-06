@@ -136,7 +136,7 @@ const Home = () => {
                         />
                     </div>    
                     <div className="my-24">
-                        <Link href={"/shop"} className="md:py-4 md:px-8 border-2 py-2 px-4 border-primary  rounded-xl text-white font-bold tracking-widest bg-primary hover:text-primary hover:bg-transparent transition-all duration-200 ">
+                        <Link href={"/shop"} className="py-4 px-8 border-2 border-primary  rounded-xl text-white font-bold tracking-widest bg-primary hover:text-primary hover:bg-transparent transition-all duration-200 ">
                             VIEW ALL PRODUCT
                         </Link>  
                     </div>
