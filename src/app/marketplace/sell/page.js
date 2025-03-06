@@ -73,7 +73,7 @@ export default function SellProductForm() {
                     <input type="file" onChange={handleFileChange} className="w-full border rounded px-3 py-2 mt-1" />
                 </div>
                 <div className="col-span-2 text-center mt-4">
-                    <Link href="/seller_profile" className="bg-black text-white px-8 py-3 rounded-md font-semibold hover:bg-gray-800">Submit</Link>
+                    <Link href="/seller_profile" className="bg-black text-white px-12 py-3 rounded-md font-semibold hover:bg-gray-800">Submit Form</Link>
                 </div>
             </form>
         </main>

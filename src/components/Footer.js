@@ -8,36 +8,43 @@ export default function Footer() {
                 {/* Kolom pertama: Deskripsi dan media sosial */}
                 <div className="text-left">
                     <p className="font-bold uppercase text-3xl md:text-4xl">fastainable</p>
-                    <p className="mt-4 text-sm md:text-base tracking-wider">
+                    <p className="mt-4 text-sm tracking-wide max-w-sm md:max-w-md">
                         Media pengolahan limbah fashion. <br />
                         Perpanjang siklus fashion dan jauhi fast fashion untuk keberlanjutan lingkungan.
                     </p>
                     <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 mt-4">
-                        <a href="#" className="hover:underline hover:font-medium">Instagram</a>
-                        <a href="#" className="hover:underline hover:font-medium">TikTok</a>
+                        <Link href="#" className="hover:underline hover:font-medium flex">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-4 mt-1 mr-2">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                            </svg>
+                            Instagram
+                        </Link>
+                        <Link href="#" className="hover:underline hover:font-medium flex">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-4 mt-1 mr-2">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                            </svg>
+                            TikTok
+                        </Link>
                     </div>
                 </div>
 
-                {/* Kolom kedua: Navigasi */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div className="grid grid-rows-3 capitalize text-left">
-                        <Link href="/about" className="hover:underline hover:font-medium">About</Link>
+                    <div className="grid grid-cols-3 md:grid-cols-1 capitalize text-left">
                         <Link href="/marketplace" className="hover:underline hover:font-medium">Shop</Link>
-                        <Link href="/sell" className="hover:underline hover:font-medium">Sell</Link>
+                        <Link href="/blog" className="hover:underline hover:font-medium">Blog</Link>
+                        <Link href="/about" className="hover:underline hover:font-medium">About</Link>
                     </div>
-
-                    <div className="grid grid-rows-3 capitalize text-left">
-                        <a href="#" className="hover:underline hover:font-medium">FAQ</a>
-                        <a href="#" className="hover:underline hover:font-medium">Privacy & Policy</a>
-                        <a href="#" className="hover:underline hover:font-medium">Terms & Condition</a>
+                    <hr className="h-px bg-gray-700 border-0 md:hidden" />
+                    <div className="grid grid-cols-3 md:grid-cols-1 capitalize text-left">
+                        <Link href="/about" className="hover:underline hover:font-medium">FAQ</Link>
+                        <Link href="/about" className="hover:underline hover:font-medium">Privacy & Policy</Link>
+                        <Link href="/about" className="hover:underline hover:font-medium">Terms & Condition</Link>
                     </div>
                 </div>
             </div>
 
-            {/* Garis pemisah */}
             <hr className="h-px bg-gray-700 border-0 my-4" />
 
-            {/* Hak cipta */}
             <p className="capitalize text-xs md:text-sm mb-2 px-4">
                 © copy 2025 Fashion Waste | All rights reserved.
             </p>
