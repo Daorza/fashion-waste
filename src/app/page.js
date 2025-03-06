@@ -15,7 +15,7 @@ const Home = () => {
     return (
             <div className="flex flex-col items-center justify-center">
                 {/* Section 1: Hero Background */}
-                <div className="w-full h-dvh relative">
+                <div className="w-full h-dvh relative overflow-hidden">
                     <Image
                         src={"/images/background-2.jpg"}
                         alt="gambar fashion"
@@ -29,13 +29,13 @@ const Home = () => {
                         <div
                             className={`flex flex-col gap-4 md:me-28 items-end md:items-end transition-transform duration-1000 ease-in ${
                                 isAnimated ? "translate-x-0" : "translate-x-full"
-                            }`}
+                            } px-2 md:p-0`}
                             id="landing-content"
                         >
-                            <h1 className="font-bold text-4xl md:text-6xl font-sans tracking-widest text-white uppercase md:text-right text-center">
+                            <h1 className="font-bold text-4xl md:text-6xl font-sans tracking-widest text-white uppercase md:text-right text-right">
                                 Impactful Fashion
                             </h1>
-                            <h2 className="text-white text-md md:text-lg uppercase tracking-widest font-medium md:text-right text-center">
+                            <h2 className="text-white text-md md:text-lg uppercase tracking-widest font-medium md:text-right text-center text-sm">
                                 Sustainable | Reduceable | Reuseable
                             </h2>
                             <Link
@@ -49,7 +49,7 @@ const Home = () => {
                 </div>
 
                 {/* Section 2: White Section */}
-                <div className="w-full max-w-7xl py-20 flex-col md:flex-row bg-white flex justify-center items-center">
+                <div className="w-full max-w-[92rem]  py-20 flex-col md:flex-row md:gap-36 gap-12 flex-auto bg-white flex justify-center items-center">
                     <SalesValueCard icon={
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1" stroke="currentColor" className="size-16">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" />

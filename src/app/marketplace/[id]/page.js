@@ -1,5 +1,7 @@
+"use client"
 import { notFound } from "next/navigation";
 import Image from "next/image";
+import { useEffect } from "react";
 
 const products = [
     {id: "1", name: "Oversize T-shirt", price: "Rp50.000", image: "/models/models1.jpg", description: "Oversize T-shirt, perfect shoulder cut."},
