@@ -194,7 +194,18 @@ export default function Marketplace() {
           >
             Clear Filters
           </button>
+          <div className="px-4 py-2 mt-8 rounded-md shadow-md ">
+                            <p className="text-lg font-semibold capitalize">take a step</p>
+                            <div className="text-sm mt-2">
+                                Start to sell your second-hand clothing at <span className="font-semibold">Fastainable!</span>
+                            </div>
+                            <hr className="h-px my-2" />
+                            <div >
+                                <Link href={'/marketplace/sell'} className="mt-2 py-2 font-medium text-sm underline underline-offset-2 hover:font-semibold">Sell your products</Link>
+                            </div>
+            </div>
         </div>
+
       </div>
 
       {/* Overlay */}
@@ -206,56 +217,69 @@ export default function Marketplace() {
       )}
 
       {/* Desktop Filter */}
-      <div className="block md:flex p-4 md:p-8">
-            <div className="hidden md:block h-max w-1/4 m-2 shadow-md rounded-md px-4 py-2 bg-gradient-to-br from-blue-50 to-purple-50 border border-blue-100">
-                    <h1 className="text-lg font-semibold">Filter Products</h1>
-                    <hr className="h-px my-2" />
-                    {Object.keys(filterOptions).map((filterType) => (
-                        <div key={filterType} className="my-2">
-                            <h2 className="text-base font-semibold capitalize py-2">{filterType}</h2>
-                                {filterOptions[filterType].map((value) => (
-                                    <label key={value} className="block">
-                                        <input
-                                            type="checkbox"
-                                            checked={filters[filterType].includes(value)}
-                                            onChange={() => handleFilterChange(filterType, value)}
-                                            className="mr-2"
-                                        />
-                                        {value}
-                                    </label>
-                                    ))}
-                            <hr className="h-px my-2" />
-                        </div>
-                            ))}
-                            {/* Clear Filter Button */}
-                            <button
-                                onClick={clearFilters}
-                                className="w-full mt-4 bg-red-500 text-white px-4 py-2 rounded shadow hover:bg-red-700 transition"
-                            >
-                                Clear Filters
-                            </button>
+      <div className="block md:flex  p-4 md:p-8">
+        <div className="h-screen overflow-y-scroll w-1/5 hidden md:block ">
+          <div className="m-2 shadow-md rounded-md px-4 py-2 bg-gradient-to-br from-blue-50 to-purple-50 border border-blue-100">
+                      <h1 className="text-lg font-semibold">Filter Products</h1>
+                      <hr className="h-px my-2" />
+                      {Object.keys(filterOptions).map((filterType) => (
+                          <div key={filterType} className="my-2">
+                              <h2 className="text-base font-semibold capitalize py-2">{filterType}</h2>
+                                  {filterOptions[filterType].map((value) => (
+                                      <label key={value} className="block">
+                                          <input
+                                              type="checkbox"
+                                              checked={filters[filterType].includes(value)}
+                                              onChange={() => handleFilterChange(filterType, value)}
+                                              className="mr-2"
+                                          />
+                                          {value}
+                                      </label>
+                                      ))}
+                              <hr className="h-px my-2" />
+                          </div>
+                              ))}
+                              {/* Clear Filter Button */}
+                              <button
+                                  onClick={clearFilters}
+                                  className="w-full mt-4 bg-red-500 text-white px-4 py-2 rounded shadow hover:bg-red-700 transition"
+                              >
+                                  Clear Filters
+                              </button>
             </div>
+              <div className="px-4 py-2 mt-8 rounded-md shadow-md ">
+                  <p className="text-lg font-semibold capitalize">take a step</p>
+                  <div className="text-sm mt-2">
+                      Start to sell your second-hand clothing at <span className="font-semibold">Fastainable!</span>
+                  </div>
+                  <hr className="h-px my-2" />
+                  <div >
+                      <Link href={'/marketplace/sell'} className="mt-2 py-2 font-medium text-sm underline underline-offset-2 hover:font-semibold">Sell your products</Link>
+                  </div>
+              </div>
+        </div>
+            
 
             {/* Product Grid */}
-            <div className="p-4 md:w-3/4 w-full">
+            <div className="p-4 md:w-4/5 md:h-screen md:overflow-y-scroll w-full">
                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                    {filteredProducts.map((product) => (
-                        <Link key={product.id} href={`/marketplace/${product.id}`} className="border rounded-lg overflow-hidden">
-                        <Image
-                            src={product.image}
-                            alt={product.name}
-                            width={300} 
-                            height={400}
-                            className="w-full h-48 object-cover object-top"
-                        />
-                        <div className="p-4">
-                            <h3 className="font-medium h-12 overflow-clip">{product.name}</h3>
-                            <p className="text-gray-600 h-8">{product.price}</p>
-                        </div>
-                        </Link>
-                    ))}
+                      {filteredProducts.map((product) => (
+                          <Link key={product.id} href={`/marketplace/${product.id}`} className="border rounded-lg overflow-hidden">
+                          <Image
+                              src={product.image}
+                              alt={product.name}
+                              width={300} 
+                              height={400}
+                              className="w-full h-48 md:h-max object-cover object-top"
+                          />
+                          <div className="p-4">
+                              <h3 className="font-medium h-12 overflow-clip">{product.name}</h3>
+                              <p className="text-gray-600 h-8">{product.price}</p>
+                          </div>
+                          </Link>
+                      ))}
                     </div>
-                </div>
+            </div>
       </div>
     </div>
   );
