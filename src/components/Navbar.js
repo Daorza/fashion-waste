@@ -5,27 +5,63 @@ import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Routes from "../routes/routes";
+import axios from "axios"
+import SearchForm from "./search/SearchForm";
+
 
 export default function Navbar() {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [products, setProducts] = useState([])
+  const [query, setQuery] = useState("")
+  const [filteredProduct, setFilteredProduct] = useState([])
   const pathname = usePathname();
 
   // Scroll event handler
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.scrollY || document.documentElement.scrollTop;
-      setScrollPosition(scrollTop);
-    };
     document.body.style.overflow = isDrawerOpen ? "hidden" : "auto";
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [isDrawerOpen, isSearchOpen]);
+  // Fetch data saat komponen pertama kali di-mount
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const res = await axios.get('/data/product.json')
+        setProducts(res.data)
+      } catch (error) {
+        console.error("Error fetching products:", error)
+      }
+    }
+    fetchProducts()
+  }, [])
 
+  // Filter produk setiap kali query berubah
+  useEffect(() => {
+    if (query.length > 0) {
+      setFilteredProduct(
+        products.filter(product =>
+          product.name.toLowerCase().includes(query.toLowerCase())
+        )
+      )
+    } else {
+      setFilteredProduct([]) // Reset hasil pencarian saat query kosong
+    }
+  }, [query, products])
+  const CloseSearch = () => {
+    setQuery("")
+    setFilteredProduct([])
+    closeSearch()
+  }
+  const handleScroll = () => {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    setScrollPosition(scrollTop);
+  };
   // Toggle drawer state
   const toggleDrawer = () => {
     setIsDrawerOpen(!isDrawerOpen);
+    closeSearch();
   };
   // Close drawer
   const closeDrawer = () => {
@@ -34,6 +70,7 @@ export default function Navbar() {
   //toggle search
   const toggleSearch = () =>{
     setIsSearchOpen(!isSearchOpen);
+    closeDrawer();
   }
   //close search
   const closeSearch = () => {
@@ -48,28 +85,18 @@ export default function Navbar() {
           className="fixed inset-0 z-40 bg-black bg-opacity-50"
           onClick={() => {
             closeDrawer();
-            closeSearch();
+            CloseSearch();
           }}
         />
       )}
 
-      {/* search drawer */}
        {/* Search Drawer */}
        <div
-        className={`fixed top-0 left-0 mt-16 w-full bg-white z-50 transition-transform duration-300 ease-in-out ${
-          isSearchOpen ? "translate-y-0" : "-translate-y-32"
+        className={`fixed top-0 left-0 mt-16 w-full bg-transparent z-40 transition-transform duration-500 ease-in-out ${
+          isSearchOpen ? "translate-y-0" : "-translate-y-96"
         }`}
       >
-        <div className="flex justify-between items-center h-16 px-4 border-b">
-          <input
-            type="text"
-            placeholder="Search..."
-            className="w-full p-2 border rounded-md focus:outline-none"
-          />
-          <button onClick={closeSearch} className="ml-4 text-gray-600">
-            ✖
-          </button>
-        </div>
+        <SearchForm CloseSearch={CloseSearch} filteredProduct={filteredProduct} setQuery={setQuery} query={query}/>
       </div>
 
       {/* Mobile Menu Drawer */}
@@ -94,7 +121,7 @@ export default function Navbar() {
         className={`fixed w-full z-50 transition-shadow duration-500 ${scrollPosition > 10 ? "shadow-md" : pathname == Routes.Home ? "shadow-none" : "shadow-md"} ${pathname == "/auth/login" || pathname == "/auth/register" ? "hidden" : "block"}`}
       >
         <div
-          className={`flex justify-between items-center h-16 px-4 transition-all duration-500 ease-in-out ${scrollPosition > 10 || isDrawerOpen || isSearchOpen ? "bg-white text-black" : pathname == "/" ? "bg-transparent text-white" : "bg-white text-black"} hover:bg-white hover:text-black`}
+          className={`flex justify-between items-center h-16 px-4 md:px-16 transition-all duration-500 ease-in-out ${scrollPosition > 10 || isDrawerOpen || isSearchOpen ? "bg-white text-black" : pathname == "/" ? "bg-transparent text-white" : "bg-white text-black"} hover:bg-white hover:text-black`}
         >
           {/* Mobile Menu Button */}
           <div className="md:hidden">
