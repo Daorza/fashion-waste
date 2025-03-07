@@ -3,33 +3,29 @@ import Image from "next/image";
 export default function Profile() {
     return (
         <main>
-            <div className="bg-black text-white text-center p-2 text-sm font-medium">
-                <span className="font-bold">30%</span> OFF-FULL PRICE AND SALE
-            </div>
-
             <nav className="border-b py-3 bg-white">
-                <div className="container mx-auto px-4 flex justify-center space-x-10 text-sm">
-                    <Link href="/profile/validate" className="text-black hover:text-gray-600 transition">Validate</Link>
-                    <a href="#" className="text-black hover:text-gray-600 transition">Orders & Returns</a>
-                    <a href="#" className="text-black hover:text-gray-600 transition">Gift Cards</a>
+                <div className="container mx-auto px-4 flex justify-center space-x-4 text-sm flex-wrap">
+                    <Link href="/seller_profile/" className="text-black font-bold hover:text-gray-600 transition">Profile</Link>
+                    <Link href="/seller_profile/validate/" className="text-black">Validate</Link>
+                    <Link href="/seller_profile/orders_and_returns/" className="text-black hover:text-gray-600 transition">Orders & Returns</Link>
+                    <Link href="/seller_profile/gift_cards/" className="text-black hover:text-gray-600 transition">Gift Cards</Link>
                 </div>
             </nav>
 
             <div className="container mx-auto px-4 py-8">
-                {/* Profile Header with Photo */}
-                <div className="flex items-center mb-6">
-                    <div className="mr-4">
+                <div className="flex flex-col sm:flex-row items-center sm:items-start mb-6">
+                    <div className="mr-0 sm:mr-4 mb-4 sm:mb-0">
                         <Image 
                             src="/images/cat.jpg" 
                             alt="Profile Photo" 
                             width={80} 
                             height={80} 
-                            className="w-20 h-20 rounded-full border-4 border-gray-300 object-cover"
+                            className="w-20 h-20 sm:w-24 sm:h-24 rounded-full border-4 border-gray-300 object-cover"
                         />
                     </div>
-                    <div>
-                        <h1 className="text-3xl font-bold text-black">arixa</h1>
-                        <div className="flex items-center mt-1">
+                    <div className="text-center sm:text-left">
+                        <h1 className="text-2xl sm:text-3xl font-bold text-black">arixa</h1>
+                        <div className="flex justify-center sm:justify-start mt-1">
                             <span className="bg-gray-100 text-black px-3 py-1 rounded-full text-sm font-medium">
                                 $20 points to spend
                             </span>
@@ -50,9 +46,10 @@ export default function Profile() {
                         </a>
                     </div>
                 </div>
+                
                 <div className="bg-white rounded-xl p-6 border border-gray-200">
-                    <div className="flex items-center justify-between">
-                        <div>
+                    <div className="flex flex-col sm:flex-row items-center sm:items-start justify-between">
+                        <div className="text-center sm:text-left">
                             <h2 className="font-bold text-lg text-black mb-2">REWARDS</h2>
                             <p className="text-gray-600 max-w-md">
                                 This is your personal space. Track your membership status and manage all 
@@ -64,7 +61,7 @@ export default function Profile() {
                             alt="Reward Badge" 
                             width={96} 
                             height={96} 
-                            className="w-16 h-16 object-contain"
+                            className="w-16 h-16 sm:w-20 sm:h-20 object-contain mt-4 sm:mt-0"
                         />
                     </div>
                 </div>

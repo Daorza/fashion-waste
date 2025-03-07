@@ -10,13 +10,11 @@ export default function Profile() {
             <nav className="border-b py-3 bg-white">
                 <div className="container mx-auto px-4 flex justify-center space-x-10 text-sm">
                     <Link href="/profile/validate" className="text-black hover:text-gray-600 transition">Validate</Link>
-                    <a href="#" className="text-black hover:text-gray-600 transition">Orders & Returns</a>
                     <a href="#" className="text-black hover:text-gray-600 transition">Gift Cards</a>
                 </div>
             </nav>
 
             <div className="container mx-auto px-4 py-8">
-                {/* Profile Header with Photo */}
                 <div className="flex items-center mb-6">
                     <div className="mr-4">
                         <Image 
@@ -51,7 +49,6 @@ export default function Profile() {
                     </div>
                 </div>
 
-                {/* Purchase History */}
                 <div className="bg-gray-100 rounded-xl p-6 border border-gray-200">
                     <h2 className="font-bold text-lg mb-4 text-black">PURCHASE HISTORY</h2>
                     <div className="space-y-4">
