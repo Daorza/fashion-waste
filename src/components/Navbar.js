@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
-
+import Routes from "../routes/routes";
 export default function Navbar() {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -83,10 +83,10 @@ export default function Navbar() {
         className={`fixed w-full z-50 transition-shadow duration-500 ${
           scrollPosition > 10
             ? "shadow-md"
-            : pathname == "/"
+            : pathname == Routes.Home
             ? "shadow-none"
             : "shadow-md"
-        }`}
+        } ${pathname == "/auth/login" || pathname == "/auth/register" ? "hidden":"block"}`}
       >
         <div
           className={`flex justify-between items-center h-16 px-4 transition-all duration-500 ease-in-out ${
