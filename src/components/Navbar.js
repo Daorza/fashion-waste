@@ -120,7 +120,7 @@ export default function Navbar() {
             <Link href="/" className="font-bold text-2xl font-sans tracking-widest">FASTAINABLE</Link>
             <div className="md:flex hidden justify-start items-center gap-8 mt-1 font-extralight md:text-lg text-sm uppercase">
               <Link href="/marketplace">Shop</Link>
-              <Link href="/">Blog</Link>
+              <Link href="/blog">Blog</Link>
               <Link href="/about">About</Link>
             </div>
           </div>
