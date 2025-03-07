@@ -55,7 +55,7 @@ export default function Navbar() {
               Shop
             </Link>
             <Link
-              href="/"
+              href="/blog"
               className="block py-4 text-lg font-medium text-gray-700 hover:bg-gray-100"
               onClick={closeDrawer}
             >
@@ -140,7 +140,7 @@ export default function Navbar() {
             </Link>
             <div className="md:flex hidden justify-start items-center gap-8 mt-1 font-extralight md:text-lg text-sm uppercase">
               <Link href="/marketplace">Shop</Link>
-              <Link href="/">Blog</Link>
+              <Link href="/blog">Blog</Link>
               <Link href="/about">About</Link>
             </div>
           </div>
