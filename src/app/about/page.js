@@ -1,26 +1,69 @@
 export default function About() {
     return (
-        <div className="bg-gray-100 flex flex-col min-h-screen">
-            <main className="flex-grow max-w-4xl mx-auto mt-10 p-8 bg-white shadow-xl rounded-xl">
-                <h2 className="text-3xl font-bold text-gray-900">About Us</h2>
-                <p className="mt-6 text-gray-700 leading-relaxed">
-                    Welcome to <span className="text-green-600 font-semibold">Fastainable</span>! Our mission is to reduce the negative impact of fast fashion by promoting sustainable clothing practices.
-                    We provide a platform where you can buy high-quality second-hand clothes and exchange your old outfits for something new to you.
+        <main className="flex items-center justify-center py-12 bg-gray-100">
+            <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-2xl text-center">
+                <h1 className="text-3xl font-bold text-black mb-4">About Us</h1>
+                <p className="text-gray-600 mb-6">
+                    Welcome to our platform! We are dedicated to providing the best experience for our users.
+                    Our mission is to create a seamless and enjoyable way to trade, purchase, and interact within
+                    our marketplace.
                 </p>
-                <p className="mt-4 text-gray-700 leading-relaxed">
-                    Fast fashion contributes to excessive waste and environmental harm. By choosing to shop second-hand and participate in clothing exchanges, you help extend the life cycle of garments,
-                    reduce textile waste, and support a more eco-friendly fashion industry.
-                </p>
-                <div className="mt-8 bg-gray-50 p-6 rounded-lg shadow-md">
-                    <h3 className="text-xl font-semibold text-gray-800">Why Choose Fastainable?</h3>
-                    <ul className="list-disc pl-5 mt-3 text-gray-700 space-y-2">
-                        <li>Reduce textile waste and environmental pollution</li>
-                        <li>Affordable, high-quality pre-loved clothing</li>
-                        <li>Exchange system to refresh your wardrobe sustainably</li>
-                        <li>Support ethical and responsible fashion</li>
-                    </ul>
+                <div className="grid md:grid-cols-2 gap-6 text-left">
+                    <div className="p-4 border rounded-lg shadow-sm hover:shadow-md transition">
+                        <h2 className="text-xl font-semibold text-black">Our Mission</h2>
+                        <p className="text-gray-600 mt-2">
+                            To create a sustainable and user-friendly marketplace for trading goods and services.
+                        </p>
+                    </div>
+                    <div className="p-4 border rounded-lg shadow-sm hover:shadow-md transition">
+                        <h2 className="text-xl font-semibold text-black">Our Vision</h2>
+                        <p className="text-gray-600 mt-2">
+                            To be the go-to platform for seamless, secure, and rewarding exchanges worldwide.
+                        </p>
+                    </div>
                 </div>
-            </main>
-        </div>
+                <div className="mt-8">
+                    <h2 className="text-xl font-semibold text-black mb-3">Meet Our Team</h2>
+                    <p className="text-gray-600 mb-6">
+                        We are a team of passionate individuals dedicated to making your experience better every day.
+                    </p>
+                    <div className="grid md:grid-cols-3 gap-6">
+                        <div className="p-4 border rounded-lg shadow-sm hover:shadow-md transition text-center">
+                            <div className="w-24 h-24 mx-auto mb-3 rounded-lg overflow-hidden">
+                                <img 
+                                    src="/images/dummy_photo.jpg" 
+                                    alt="Person 1" 
+                                    className="w-full h-full object-cover"
+                                />
+                            </div>
+                            <h3 className="text-lg font-semibold text-black">Nugroho Nur Cahyo</h3>
+                            <p className="text-gray-600">Role / Position</p>
+                        </div>
+                        <div className="p-4 border rounded-lg shadow-sm hover:shadow-md transition text-center">
+                            <div className="w-24 h-24 mx-auto mb-3 rounded-lg overflow-hidden">
+                                <img 
+                                    src="/images/dummy_photo.jpg" 
+                                    alt="Person 2" 
+                                    className="w-full h-full object-cover"
+                                />
+                            </div>
+                            <h3 className="text-lg font-semibold text-black">Muhammad Reza Hafizzi</h3>
+                            <p className="text-gray-600">Role / Position</p>
+                        </div>
+                        <div className="p-4 border rounded-lg shadow-sm hover:shadow-md transition text-center">
+                            <div className="w-24 h-24 mx-auto mb-3 rounded-lg overflow-hidden">
+                                <img 
+                                    src="/images/dummy_photo.jpg" 
+                                    alt="Person 3" 
+                                    className="w-full h-full object-cover"
+                                />
+                            </div>
+                            <h3 className="text-lg font-semibold text-black">Naufal Bintanga Pradana H</h3>
+                            <p className="text-gray-600">Role / Position</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
     );
 }
