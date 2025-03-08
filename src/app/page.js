@@ -179,9 +179,10 @@ const Home = () => {
                                         <Link 
                                             href={"/"} 
                                             className="px-6 sm:px-8 py-2 text-white text-sm bg-graphite font-semibold text-center w-fit rounded-md shadow-md uppercase tracking-widest 
-                                            hover:bg-transparent hover:font-lx`ight hover:text-graphite hover:border hover:border-graphite transition-all duration-200"
+                                            hover:bg-transparent hover:font-light hover:text-graphite hover:border hover:border-graphite transition-all duration-200"
                                         > 
-                                            See full article
+                                                Read More →
+
                                         </Link>
                                     </div>
                                 </div>
