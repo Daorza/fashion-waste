@@ -2,75 +2,76 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import axios from "axios";
 
-const products = [
-    {
-      id: "1",
-      name: "Oversize T-shirt",
-      price: "Rp50.000",
-      image: "/models/models1.jpg",
-      category: "Oversize",
-      size: "L",
-      material: "Katun",
-      color: "Hitam",
-      fit: "Regular",
-    },
-    {
-      id: "2",
-      name: "Premium Polo Shirt",
-      price: "Rp125.000",
-      image: "/models/models2.jpg",
-      category: "Polo",
-      size: "M",
-      material: "Poliester",
-      color: "Biru",
-      fit: "Slim",
-    },
-    {
-      id: "3",
-      name: "Denim Pants",
-      price: "Rp115.000",
-      image: "/models/models3.jpg",
-      category: "Denim",
-      size: "XL",
-      material: "Denim",
-      color: "Biru",
-      fit: "Loose",
-    },
-    {
-      id: "4",
-      name: "Oversize T-shirt",
-      price: "Rp50.000",
-      image: "/models/models1.jpg",
-      category: "Oversize",
-      size: "S",
-      material: "Katun",
-      color: "Putih",
-      fit: "Regular",
-    },
-    {
-      id: "5",
-      name: "Premium Polo Shirt",
-      price: "Rp125.000",
-      image: "/models/models2.jpg",
-      category: "Polo",
-      size: "L",
-      material: "Poliester",
-      color: "Hitam",
-      fit: "Slim",
-    },
-    {
-      id: "6",
-      name: "Denim Pants",
-      price: "Rp115.000",
-      image: "/models/models3.jpg",
-      category: "Denim",
-      size: "M",
-      material: "Denim",
-      color: "Biru",
-      fit: "Regular",
-    },
-  ];
+// const products = [
+//     {
+//       id: "1",
+//       name: "Oversize T-shirt",
+//       price: "Rp50.000",
+//       image: "/models/models1.jpg",
+//       category: "Oversize",
+//       size: "L",
+//       material: "Katun",
+//       color: "Hitam",
+//       fit: "Regular",
+//     },
+//     {
+//       id: "2",
+//       name: "Premium Polo Shirt",
+//       price: "Rp125.000",
+//       image: "/models/models2.jpg",
+//       category: "Polo",
+//       size: "M",
+//       material: "Poliester",
+//       color: "Biru",
+//       fit: "Slim",
+//     },
+//     {
+//       id: "3",
+//       name: "Denim Pants",
+//       price: "Rp115.000",
+//       image: "/models/models3.jpg",
+//       category: "Denim",
+//       size: "XL",
+//       material: "Denim",
+//       color: "Biru",
+//       fit: "Loose",
+//     },
+//     {
+//       id: "4",
+//       name: "Oversize T-shirt",
+//       price: "Rp50.000",
+//       image: "/models/models1.jpg",
+//       category: "Oversize",
+//       size: "S",
+//       material: "Katun",
+//       color: "Putih",
+//       fit: "Regular",
+//     },
+//     {
+//       id: "5",
+//       name: "Premium Polo Shirt",
+//       price: "Rp125.000",
+//       image: "/models/models2.jpg",
+//       category: "Polo",
+//       size: "L",
+//       material: "Poliester",
+//       color: "Hitam",
+//       fit: "Slim",
+//     },
+//     {
+//       id: "6",
+//       name: "Denim Pants",
+//       price: "Rp115.000",
+//       image: "/models/models3.jpg",
+//       category: "Denim",
+//       size: "M",
+//       material: "Denim",
+//       color: "Biru",
+//       fit: "Regular",
+//     },
+//   ];
   
 
 const filterOptions = {
@@ -81,7 +82,9 @@ const filterOptions = {
   fit: ["Slim", "Regular", "Loose"],
 };
 
+
 export default function Marketplace() {
+  
   const [filters, setFilters] = useState({
     category: [],
     size: [],
@@ -90,6 +93,17 @@ export default function Marketplace() {
     fit: [],
   });
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const [products, setProducts] = useState([]);
+
+  const fetchAPI =  async() => {
+    const res = await axios.get('/data/product.json');
+    setProducts(res.data)
+  }
+  
+
+  useEffect(() => {
+    fetchAPI();
+  }, [])
 
   useEffect(() => {
     document.body.style.overflow = isDrawerOpen ? "hidden" : "auto";

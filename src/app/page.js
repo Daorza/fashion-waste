@@ -5,14 +5,20 @@ import Link from "next/link";
 import SalesValueCard from "../components/SalesValueCard";
 import LandingProductCard from "../components/LandingProductCard";
 import RatingCard from "@/components/RatingCard";
+import axios from "axios";
 const Home = () => {
+    
     const [isAnimated, setIsAnimated] = useState(false);
-
+    const [product, setProducts] = useState([]);
     useEffect(() => {
         // Trigger animasi setelah komponen dimuat
         setIsAnimated(true);
+        fetchData();
     }, []);
-
+    const fetchData = async () =>{
+        const res = await axios.get('/data/product.json');
+        setProducts(res.data);
+    }
     return (
             <div className="flex flex-col items-center justify-center">
                 {/* Section 1: Hero Background */}
@@ -84,58 +90,24 @@ const Home = () => {
                     </h1>
                     <div className="grid md:grid-cols-4 grid-cols-1 gap-4 max-w-[92rem]">
                         {/* grid items */}
-                        <LandingProductCard
-                            imgSrc={"/models/models6.jpg"}
-                            colorChoice={
-                                <div className="flex justify-center gap-2">
-                                    <span className="h-4 w-4 bg-blue-950 rounded-full"></span>
-                                    <span className="h-4 w-4 bg-blue-950 rounded-full"></span>
-                                    <span className="h-4 w-4 bg-blue-950 rounded-full"></span>
-                                </div>
-                            }
-                            isNew = {true}
-                            price={"RP. 199.999"}
-                            tiitle={"KOREAN KNIT NON-IRON STYLE"}
-                        />
-                        <LandingProductCard
-                            imgSrc={"/models/models2.jpg"}
-                            colorChoice={
-                                <div className="flex justify-center gap-2">
-                                    <span className="h-4 w-4 bg-blue-950 rounded-full"></span>
-                                    <span className="h-4 w-4 bg-blue-950 rounded-full"></span>
-                                    <span className="h-4 w-4 bg-blue-950 rounded-full"></span>
-                                </div>
-                            }
-                            isNew = {true}
-                            price={"RP. 199.999"}
-                            tiitle={"CASUAL NEW STYLE"}
-                        />
-                        <LandingProductCard
-                            imgSrc={"/models/models1.jpg"}
-                            colorChoice={
-                                <div className="flex justify-center gap-2">
-                                    <span className="h-4 w-4 bg-blue-950 rounded-full"></span>
-                                    <span className="h-4 w-4 bg-blue-950 rounded-full"></span>
-                                    <span className="h-4 w-4 bg-blue-950 rounded-full"></span>
-                                </div>
-                            }
-                            isNew = {true}
-                            price={"RP. 199.999"}
-                            tiitle={"LALALA MODEL STYLE"}
-                        />
-                        <LandingProductCard
-                            imgSrc={"/models/models4.jpg"}
-                            colorChoice={
-                                <div className="flex justify-center gap-2">
-                                    <span className="h-4 w-4 bg-blue-950 rounded-full"></span>
-                                    <span className="h-4 w-4 bg-blue-950 rounded-full"></span>
-                                    <span className="h-4 w-4 bg-blue-950 rounded-full"></span>
-                                </div>
-                            }
-                            isNew = {true}
-                            price={"RP. 199.999"}
-                            tiitle={"LINGGANGU GIRL STYLE"}
-                        />
+                        {
+                            product.map((dat, index)=>{
+                                return <LandingProductCard
+                                key={index}
+                                imgSrc={dat.image}
+                                colorChoice={
+                                    <div className="flex justify-center gap-2">
+                                        <span className="h-4 w-4 bg-blue-950 rounded-full"></span>
+                                        <span className="h-4 w-4 bg-blue-950 rounded-full"></span>
+                                        <span className="h-4 w-4 bg-blue-950 rounded-full"></span>
+                                    </div>
+                                }
+                                isNew = {true}
+                                price={dat.price}
+                                tiitle={dat.name}
+                            />
+                            })
+                        }
                     </div>    
                     <div className="mt-12">
                         <Link href={"/shop"} className="py-4 px-12 border-2 border-primary rounded-lg text-white font-bold tracking-widest bg-primary hover:text-primary hover:bg-transparent transition-all duration-200 ">
