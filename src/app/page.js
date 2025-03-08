@@ -92,7 +92,8 @@ const Home = () => {
                         {/* grid items */}
                         {
                             product.map((dat, index)=>{
-                                return <LandingProductCard
+                                return <Link key={index} href={`/marketplace/${product.id}`}>
+                                <LandingProductCard
                                 key={index}
                                 imgSrc={dat.image}
                                 colorChoice={
@@ -106,6 +107,7 @@ const Home = () => {
                                 price={dat.price}
                                 tiitle={dat.name}
                             />
+                                </Link>
                             })
                         }
                     </div>    
