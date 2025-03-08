@@ -84,7 +84,7 @@ const Home = () => {
                     />
                 </div>
                 {/* section 3 */}
-                <div className="w-full px-6 flex flex-col gap-12 justify-center items-center mt-2">
+                <div className="w-full px-6 flex flex-col gap-12 justify-center items-center mt-2 bg-white">
                     <h1 className="tracking-widest text-2xl font-bold mb-8 uppercase">
                         always good and fresh in every condition
                     </h1>
@@ -145,10 +145,10 @@ const Home = () => {
                             />
                         </div>
                     </div>
-                    <div className="mx-20 w-full px-8 py-4">
+                    <div className="mx-20 w-full px-8 py-4 mb-8">
                     <hr className="h-px my-2 mx-2" />
                         <h1 className="tracking-widest text-2xl font-bold my-12 text-center uppercase">See the highlight</h1>
-                        <div className="w-full bg-gray-50 rounded-md shadow-md px-8 py-4">
+                        <div className="w-full bg-slate-50 rounded-md shadow-md px-8 py-4">
                             <div className="grid grid-cols-3">
                                 <div className="place-items-center">
                                     <Image src={"/models/runway1.jpg"} width={1000} height={1000} alt="runway1" className="w-80 object-center rounded-md shadow" />

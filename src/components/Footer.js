@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Footer() {
     return (
-        <footer className="bg-graphite text-amber-50 text-center px-4 py-2 mt-8">
+        <footer className="bg-graphite text-amber-50 text-center px-4 py-2">
             {/* Container utama */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 md:p-8">
                 {/* Kolom pertama: Deskripsi dan media sosial */}

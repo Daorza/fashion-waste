@@ -233,7 +233,7 @@ export default function Marketplace() {
       {/* Desktop Filter */}
       <div className="block md:flex  p-4 md:p-8">
         <div className="h-screen overflow-y-scroll w-1/5 hidden md:block ">
-          <div className="m-2 shadow-md rounded-md px-4 py-2 bg-gradient-to-br from-blue-50 to-purple-50 border border-blue-100">
+          <div className="m-2 shadow-md rounded-md px-4 py-2 bg-white">
                       <h1 className="text-lg font-semibold">Filter Products</h1>
                       <hr className="h-px my-2" />
                       {Object.keys(filterOptions).map((filterType) => (
@@ -278,7 +278,7 @@ export default function Marketplace() {
             <div className="p-4 md:w-4/5 md:h-screen md:overflow-y-scroll w-full">
                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                       {filteredProducts.map((product) => (
-                          <Link key={product.id} href={`/marketplace/${product.id}`} className="border rounded-lg overflow-hidden">
+                          <Link key={product.id} href={`/marketplace/${product.id}`} className="border rounded-lg overflow-hidden bg-white">
                           <Image
                               src={product.image}
                               alt={product.name}
