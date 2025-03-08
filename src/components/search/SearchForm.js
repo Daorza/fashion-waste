@@ -1,14 +1,14 @@
 import Image from "next/image"
 import Link from "next/link"
 import Routes from "../../routes/routes"
+import { useRouter } from "next/router"
 
 const SearchForm = ({ CloseSearch, filteredProduct, setQuery, query }) => {
- 
 
-  
+  const router = useRouter;
   return (
     <div className="flex flex-col gap-4">
-      <div className="bg-white flex md:px-16 py-4 md:py-8 gap-4 md:text-xl justify-between items-center px-4 border-b">
+      <div className="bg-white flex md:px-16 py-2 gap-4 md:text-xl justify-between items-center px-4 border-b border-t">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -50,8 +50,8 @@ const SearchForm = ({ CloseSearch, filteredProduct, setQuery, query }) => {
         ))}
         {
           filteredProduct.length > 4?
-          <div className="md:col-span-2 col-span-1 border-t-2 pt-4">
-            <Link href={Routes.Marketplace + `?query=${query}`} key="more-results" className="flex justify-center gap-4 hover:bg-gray-100 rounded-[6px] cursor-pointer">
+          <div className="md:col-span-2 flex justify-center col-span-1 border-t-2 pt-4">
+            <Link href={`/search/${query}`} key="more-results" onClick={()=>{CloseSearch();}} className="flex justify-center gap-4 hover:bg-gray-100 rounded-[6px] cursor-pointer">
               <p>See More Results</p>
             </Link>
           </div>

@@ -105,9 +105,9 @@ export default function Navbar() {
       >
         <nav className="pt-16 pb-4 px-4 flex flex-col justify-between h-screen">
           <div>
-            <Link href="/marketplace" className="block py-4 text-lg font-medium text-gray-700 hover:bg-gray-100" onClick={closeDrawer}>Shop</Link>
-            <Link href="/" className="block py-4 text-lg font-medium text-gray-700 hover:bg-gray-100" onClick={closeDrawer}>Blog</Link>
-            <Link href="/about" className="block py-4 text-lg font-medium text-gray-700 hover:bg-gray-100" onClick={closeDrawer}>About</Link>
+            <Link href="/marketplace" className="block py-4 text-lg font-medium text-gray-700 hover:bg-gray-100" onClick={()=>{closeDrawer(); CloseSearch();}}>Shop</Link>
+            <Link href="/" className="block py-4 text-lg font-medium text-gray-700 hover:bg-gray-100" onClick={()=>{closeDrawer(); CloseSearch();}}>Blog</Link>
+            <Link href="/about" className="block py-4 text-lg font-medium text-gray-700 hover:bg-gray-100" onClick={()=>{closeDrawer(); CloseSearch();}}>About</Link>
           </div>
           <Link className="flex justify-start items-center gap-4 border-black shadow-md rounded-md" href="/buyer_profile" onClick={closeDrawer}>
             <Image src="/images/cat.jpg" alt="Profile Photo" width={80} height={80} className="w-12 h-12 rounded-full border-4 border-gray-300 object-cover" />
@@ -145,10 +145,10 @@ export default function Navbar() {
           {/* Logo and Desktop Nav */}
           <div className="flex justify-center gap-12 items-center">
             <Link href="/" className="font-bold text-2xl font-sans tracking-widest">FASTAINABLE</Link>
-            <div className="md:flex hidden justify-start items-center gap-8 mt-1 font-extralight md:text-lg text-sm uppercase">
-              <Link href="/marketplace">Shop</Link>
-              <Link href="/blog">Blog</Link>
-              <Link href="/about">About</Link>
+            <div className="md:flex hidden justify-start items-center gap-8 mt-1 font-extralight tracking-widest text-sm uppercase">
+              <Link href="/marketplace" onClick={()=>{closeDrawer(); CloseSearch();}}>Shop</Link>
+              <Link href="/blog" onClick={()=>{closeDrawer(); CloseSearch();}}>Blog</Link>
+              <Link href="/about" onClick={()=>{closeDrawer(); CloseSearch();}}>About</Link>
             </div>
           </div>
 
