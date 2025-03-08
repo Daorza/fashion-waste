@@ -117,7 +117,9 @@ const Home = () => {
                         </Link>  
                     </div>
                     <div className="mx-20 w-full px-8 py-4">
-                        <h1 className="tracking-widest text-2xl font-bold mb-8 text-center uppercase">What people say?</h1>
+                    <hr className="h-px my-2 mx-2" />
+
+                        <h1 className="tracking-widest text-2xl font-bold mt-12 mb-8 text-center uppercase">What people say?</h1>
                         <div className="grid grid-cols-4 gap-4 mx-28">
                             <RatingCard 
                                 rating = {"5"}
@@ -147,20 +149,30 @@ const Home = () => {
                     </div>
                     <div className="mx-20 w-full px-8 py-4">
                     <hr className="h-px my-2 mx-2" />
-                        <h1 className="tracking-widest text-2xl font-bold my-8 text-left uppercase">See the highlight</h1>
+                        <h1 className="tracking-widest text-2xl font-bold my-12 text-center uppercase">See the highlight</h1>
                         <div className="w-full bg-gray-50 rounded-md shadow-md px-8 py-4">
                             <div className="grid grid-cols-3">
-                                <div>
-                                    <Image src={"/models/runway1.jpg"} width={1000} height={1000} alt="runway1" />
+                                <div className="place-items-center">
+                                    <Image src={"/models/runway1.jpg"} width={1000} height={1000} alt="runway1" className="w-80 object-center rounded-md shadow" />
                                 </div>
                                 <div className="col-span-2">
-                                    <h1 className="text-3xl font-semibold capitalize tracking-wide text-center">Stunnig looks from the 2025 PFW</h1>
+                                    <h1 className="text-3xl font-semibold capitalize tracking-wide text-center">Stunning looks from the 2025 PFW</h1>
                                     <hr className="h-px my-2 mx-4" />
-                                    <p>The 2025 Paris Fashion Week delivered a breathtaking array of designs, solidifying its place as the pinnacle of global fashion. This season, top designers showcased a mix of avant-garde creativity, timeless elegance, and bold reinventions of classic styles.
+                                    <div className="flex justify-between pt-2 *:text-xs *:italic *:text-gray-500 *:mx-4">
+                                        <p>March 3 <sup>rd</sup> 2025 </p>
+                                        <p>Ivan Montana</p>
+                                    </div>
+                                    <p className="text-sm mt-6 mx-4 px-4 text-justify">
+                                        The 2025 Paris Fashion Week delivered a breathtaking array of designs, solidifying its place as the pinnacle of global fashion. This season, top designers showcased a mix of avant-garde creativity, timeless elegance, and bold reinventions of classic styles.
                                         Among the standout collections, Chanel captivated audiences with modernized tweed ensembles, intricate embellishments, and an ethereal pastel palette. Balenciaga pushed the boundaries of futuristic fashion with oversized silhouettes, exaggerated proportions, and sleek, dystopian aesthetics. Meanwhile, Dior embraced romanticism, featuring delicate lace, flowing gowns, and an emphasis on refined femininity.
-                                        On the edgier side, Rick Owens made a statement with sculptural, almost otherworldly designs, while Saint Laurent brought back its signature dark glamour with sharply tailored suits and luxurious leather pieces. Louis Vuitton seamlessly blended heritage and innovation, presenting structured outerwear and intricate embroidery that paid homage to the brand’s rich history.
-                                        From striking haute couture to daring streetwear influences, the 2025 PFW set the tone for the year’s biggest trends, proving once again why Paris remains the heartbeat of high fashion.
+                                        On the edgier side, Rick Owens made a statement with sculptural, almost otherworldly designs, while Saint Laurent brought back its signature dark glamour with sharply tailored suits and luxurious leather pieces. Louis Vuitton seamlessly blended heritage and innovation, presenting structured outerwear and intricate embroidery that paid homage to the brand's rich history.
+                                        From striking haute couture to daring streetwear influences, the 2025 PFW set the tone for the year's biggest trends, proving once again why Paris remains the heartbeat of high fashion.
                                     </p>
+                                    <div className="mt-12 flex justify-center">
+                                        <Link href={"/"} className="px-8 py-2 text-white text-sm bg-graphite font-semibold text-center w-fit rounded-md shadow-md uppercase tracking-widest hover:bg-transparent hover:font-light hover:text-graphite hover:border hover:border-graphite transition-all duration-200"> 
+                                            See full article
+                                        </Link>
+                                    </div>
                                 </div>
                             </div>
                         </div>
