@@ -106,7 +106,7 @@ export default function Navbar() {
         <nav className="pt-16 pb-4 px-4 flex flex-col justify-between h-screen">
           <div>
             <Link href="/marketplace" className="block py-4 text-lg font-medium text-gray-700 hover:bg-gray-100" onClick={()=>{closeDrawer(); CloseSearch();}}>Shop</Link>
-            <Link href="/" className="block py-4 text-lg font-medium text-gray-700 hover:bg-gray-100" onClick={()=>{closeDrawer(); CloseSearch();}}>Blog</Link>
+            <Link href="/blog" className="block py-4 text-lg font-medium text-gray-700 hover:bg-gray-100" onClick={()=>{closeDrawer(); CloseSearch();}}>Blog</Link>
             <Link href="/about" className="block py-4 text-lg font-medium text-gray-700 hover:bg-gray-100" onClick={()=>{closeDrawer(); CloseSearch();}}>About</Link>
           </div>
           <Link className="flex justify-start items-center gap-4 border-black shadow-md rounded-md" href="/buyer_profile" onClick={closeDrawer}>

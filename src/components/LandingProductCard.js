@@ -4,7 +4,7 @@ const LandingProductCard = ({imgSrc, isNew = false, colorChoice, tiitle, price})
         <>
         <div className="col-span-1 flex flex-col gap-4">
             <div className="h-[28rem] relative hover:-translate-y-6 transition">
-                <Image src={imgSrc} className="h-[28rem] object-cover object-center rounded-md shadow" width={1000} height={1000} alt="models1"/>
+                <Image src={imgSrc} className="h-[28rem] object-cover object-center object-top rounded-md shadow" width={1000} height={1000} alt="models1"/>
                 <div className="w-full h-full absolute inset-0 grid items-end p-4">
                     {
                             isNew && (
