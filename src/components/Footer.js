@@ -7,11 +7,9 @@ export default function Footer() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 md:p-8">
                 {/* Kolom pertama: Deskripsi dan media sosial */}
                 <div className="text-left">
-                    <p className="font-bold uppercase text-3xl md:text-4xl">fastainable</p>
+                    <p className="font-bold uppercase text-3xl md:text-4xl tracking-wider">fastainable</p>
                     <p className="mt-4 text-sm tracking-wide max-w-sm md:max-w-md">
-                        Media pengolahan limbah fashion. <br />
-                        Perpanjang siklus fashion dan jauhi fast fashion untuk keberlanjutan lingkungan.
-                    </p>
+                    Extend the life cycle of fashion and move away from fast fashion for a more sustainable future. Embrace conscious consumption and responsible recycling to reduce environmental impact.                     </p>
                     <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 mt-4">
                         <Link href="#" className="hover:underline hover:font-medium flex">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-4 mt-1 mr-2">

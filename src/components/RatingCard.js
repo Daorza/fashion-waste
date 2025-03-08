@@ -1,6 +1,6 @@
 const RatingCard = ({ title, description, name, rating = 5 }) => {
     return (
-        <div className="bg-gray-50 rounded-md shadow-md px-4 py-2">
+        <div className="bg-gray-50 rounded-md shadow-md p-4">
             <div className="flex">
                 {Array.from({ length: rating }).map((_, index) => (
                     <svg
@@ -10,7 +10,7 @@ const RatingCard = ({ title, description, name, rating = 5 }) => {
                         viewBox="0 0 24 24"
                         strokeWidth={1.5}
                         stroke="currentColor"
-                        className="ml-2 size-5 fill-inherit"
+                        className="ml-2 size-5 fill-yellow-500"
                     >
                         <path
                             strokeLinecap="round"
