@@ -1,0 +1,25 @@
+[
+    {
+      "id": "1",
+      "name": "Oversize T-shirt",
+      "price": "Rp50.000",
+      "image": "/models/models1.jpg",
+      "category": "Oversize",
+      "size": "L",
+      "material": "Katun",
+      "color": "Hitam",
+      "fit": "Regular"
+    },
+    {
+      "id": "2",
+      "name": "Premium Polo Shirt",
+      "price": "Rp125.000",
+      "image": "/models/models2.jpg",
+      "category": "Polo",
+      "size": "M",
+      "material": "Poliester",
+      "color": "Biru",
+      "fit": "Slim"
+    }
+  ]
+  

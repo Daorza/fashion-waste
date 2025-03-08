@@ -6,7 +6,9 @@ import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Routes from "../routes/routes";
 import axios from "axios"
+import MobileSidebar from "./particular_nav/MobileSidebar";
 import SearchForm from "./search/SearchForm";
+import CartContent from "./particular_nav/CartContent";
 
 
 export default function Navbar() {
@@ -15,6 +17,7 @@ export default function Navbar() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [products, setProducts] = useState([])
   const [query, setQuery] = useState("")
+  const [isCartOpen, setIsCartOpen] = useState(false);
   const [filteredProduct, setFilteredProduct] = useState([])
   const pathname = usePathname();
 
@@ -23,7 +26,7 @@ export default function Navbar() {
     document.body.style.overflow = isDrawerOpen ? "hidden" : "auto";
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [isDrawerOpen, isSearchOpen]);
+  }, [isDrawerOpen, isSearchOpen, isCartOpen]);
   // Fetch data saat komponen pertama kali di-mount
   useEffect(() => {
     const fetchProducts = async () => {
@@ -76,49 +79,59 @@ export default function Navbar() {
   const closeSearch = () => {
     setIsSearchOpen(false);
   }
+  const toggleCart = () => {
+    setIsCartOpen(!isCartOpen);
+    closeDrawer();
+    closeSearch();
+  };
+
+  const closeCart = () => {
+    setIsCartOpen(false);
+  };
+  const setDefault = () => {
+            closeDrawer();
+            CloseSearch();
+            closeCart();
+  }
   return (
     <>
       {/* Drawer overlay */}
       {/* Overlay for Drawer & Search */}
-      {(isDrawerOpen || isSearchOpen) && (
+      {(isDrawerOpen || isCartOpen) && (
         <div
-          className="fixed inset-0 z-40 bg-black bg-opacity-50"
-          onClick={() => {
-            closeDrawer();
-            CloseSearch();
-          }}
+          className="fixed inset-0 z-50 bg-black bg-opacity-50"
+          onClick={() => setDefault()}
+        />
+      )}
+      {( isSearchOpen ) && (
+        <div
+          className="fixed inset-0 z-30 bg-black bg-opacity-50"
+          onClick={() => setDefault()}
         />
       )}
 
        {/* Search Drawer */}
        <div
-        className={`fixed top-0 left-0 mt-16 w-full bg-transparent z-40 transition-transform duration-500 ease-in-out ${
+        className={`fixed top-0 left-0 mt-16 w-full bg-transparent z-30 transition-transform duration-500 ease-in-out ${
           isSearchOpen ? "translate-y-0" : "-translate-y-96"
         }`}
       >
         <SearchForm CloseSearch={CloseSearch} filteredProduct={filteredProduct} setQuery={setQuery} query={query}/>
       </div>
-
+      {/* Cart Drawer */}
+      <div className={`${isCartOpen ? "translate-x-0" : "translate-x-full"} fixed z-50 top-0 right-0 h-screen w-80 md:w-96 bg-white shadow-lg transition-transform duration-300 ease-in-out`}> 
+        <CartContent closeCart={closeCart}/>
+      </div>
       {/* Mobile Menu Drawer */}
       <div
         className={`${isDrawerOpen ? "translate-x-0" : "-translate-x-full"} fixed z-50 top-0 left-0 h-screen w-64 bg-white transition-transform duration-300 ease-in-out md:hidden`}
       >
-        <nav className="pt-16 pb-4 px-4 flex flex-col justify-between h-screen">
-          <div>
-            <Link href="/marketplace" className="block py-4 text-lg font-medium text-gray-700 hover:bg-gray-100" onClick={()=>{closeDrawer(); CloseSearch();}}>Shop</Link>
-            <Link href="/blog" className="block py-4 text-lg font-medium text-gray-700 hover:bg-gray-100" onClick={()=>{closeDrawer(); CloseSearch();}}>Blog</Link>
-            <Link href="/about" className="block py-4 text-lg font-medium text-gray-700 hover:bg-gray-100" onClick={()=>{closeDrawer(); CloseSearch();}}>About</Link>
-          </div>
-          <Link className="flex justify-start items-center gap-4 border-black shadow-md rounded-md" href="/buyer_profile" onClick={closeDrawer}>
-            <Image src="/images/cat.jpg" alt="Profile Photo" width={80} height={80} className="w-12 h-12 rounded-full border-4 border-gray-300 object-cover" />
-            <p className="font-bold text-lg">Arixa</p>
-          </Link>
-        </nav>
+        <MobileSidebar setDefault={setDefault}/>
       </div>
 
       {/* Main Navbar */}
       <nav
-        className={`fixed w-full z-50 transition-shadow duration-500 ${scrollPosition > 10 ? "shadow-md" : pathname == Routes.Home ? "shadow-none" : "shadow-md"} ${pathname == "/auth/login" || pathname == "/auth/register" ? "hidden" : "block"}`}
+        className={`fixed w-full z-30 transition-shadow duration-500 ${scrollPosition > 10 ? "shadow-md" : pathname == Routes.Home ? "shadow-none" : "shadow-md"} ${pathname == "/auth/login" || pathname == "/auth/register" ? "hidden" : "block"}`}
       >
         <div
           className={`flex justify-between items-center h-16 px-4 md:px-16 transition-all duration-500 ease-in-out ${scrollPosition > 10 || isDrawerOpen || isSearchOpen ? "bg-white text-black" : pathname == "/" ? "bg-transparent text-white" : "bg-white text-black"} hover:bg-white hover:text-black`}
@@ -146,9 +159,9 @@ export default function Navbar() {
           <div className="flex justify-center gap-12 items-center">
             <Link href="/" className="font-bold text-2xl font-sans tracking-widest">FASTAINABLE</Link>
             <div className="md:flex hidden justify-start items-center gap-8 mt-1 font-extralight tracking-widest text-sm uppercase">
-              <Link href="/marketplace" onClick={()=>{closeDrawer(); CloseSearch();}}>Shop</Link>
-              <Link href="/blog" onClick={()=>{closeDrawer(); CloseSearch();}}>Blog</Link>
-              <Link href="/about" onClick={()=>{closeDrawer(); CloseSearch();}}>About</Link>
+              <Link href="/marketplace" onClick={()=>setDefault()}>Shop</Link>
+              <Link href="/blog" onClick={()=>setDefault()}>Blog</Link>
+              <Link href="/about" onClick={()=>setDefault()}>About</Link>
             </div>
           </div>
 
@@ -177,7 +190,7 @@ export default function Navbar() {
               </svg>
             </button>
               {/* cart button */}
-            <button  className="cursor-pointer">
+            <button  className="cursor-pointer" onClick={()=>toggleCart()}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
