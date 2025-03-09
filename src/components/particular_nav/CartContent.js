@@ -59,9 +59,9 @@ const CartContent = ({closeCart}) => {
                 <p>
                     Check out With 10% Discount 
                 </p>
-                <button className="w-full p-4 bg-primary text-center font-bold text-white tracking-widest">
+                <Link className="w-full p-4 bg-primary text-center font-bold text-white tracking-widest" href={"/marketplace/checkout"} onClick={()=>closeCart()}>
                     CHECKOUT &bull; RP 350.000
-                </button>
+                </Link>
             </div>
         </div>
         </>

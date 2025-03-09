@@ -209,9 +209,9 @@ export default function Navbar() {
           </div>
         </div>
       </nav>
-
+      
       {/* Placeholder for Navbar Height */}
-      {pathname != "/" && <div className="h-16" />}
+      <div className={`h-16 ${pathname == "/auth/login" || pathname == "/auth/register" || pathname == "/" ? "hidden" : "block"}`} ></div>
     </>
   );
 }
