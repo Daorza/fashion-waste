@@ -34,9 +34,9 @@ export default function Footer() {
                     </div>
                     <hr className="h-px bg-gray-700 border-0 md:hidden" />
                     <div className="grid grid-cols-3 md:grid-cols-1 capitalize text-left">
-                        <Link href="/about" className="hover:underline hover:font-medium">FAQ</Link>
-                        <Link href="/about" className="hover:underline hover:font-medium">Privacy & Policy</Link>
-                        <Link href="/about" className="hover:underline hover:font-medium">Terms & Condition</Link>
+                        <Link href="/about/#faq" className="hover:underline hover:font-medium">FAQ</Link>
+                        <Link href="/about/#terms" className="hover:underline hover:font-medium">Terms & Condition</Link>
+                        <Link href="/about/#privacy" className="hover:underline hover:font-medium">Privacy & Policy</Link>
                     </div>
                 </div>
             </div>

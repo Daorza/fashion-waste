@@ -10,7 +10,7 @@ export default function About() {
                 </p>
 
                 <div className="grid md:grid-cols-2 gap-6 text-left">
-                    <div className="p-6 border rounded-lg shadow-sm hover:shadow-md transition bg-white">
+                    <div className="p-6 border rounded-lg shadow-sm hover:shadow-md transition bg-slate-50">
                         <h2 className="text-xl font-semibold text-black flex items-center gap-2">
                             🌍 Our Mission
                         </h2>
@@ -20,7 +20,7 @@ export default function About() {
                         </p>
                     </div>
                     
-                    <div className="p-6 border rounded-lg shadow-sm hover:shadow-md transition bg-white">
+                    <div className="p-6 border rounded-lg shadow-sm hover:shadow-md transition bg-slate-50">
                         <h2 className="text-xl font-semibold text-black flex items-center gap-2">
                             🚀 Our Vision
                         </h2>
@@ -30,7 +30,7 @@ export default function About() {
                         </p>
                     </div>
 
-                    <div className="p-6 border rounded-lg shadow-sm hover:shadow-md transition bg-white">
+                    <div className="p-6 border rounded-lg shadow-sm hover:shadow-md transition bg-slate-50">
                         <h2 className="text-xl font-semibold text-black flex items-center gap-2">
                             🔍 Transparency & Trust
                         </h2>
@@ -40,7 +40,7 @@ export default function About() {
                         </p>
                     </div>
 
-                    <div className="p-6 border rounded-lg shadow-sm hover:shadow-md transition bg-white">
+                    <div className="p-6 border rounded-lg shadow-sm hover:shadow-md transition bg-slate-50">
                         <h2 className="text-xl font-semibold text-black flex items-center gap-2">
                             ♻️ Sustainability
                         </h2>
@@ -51,7 +51,7 @@ export default function About() {
                     </div>
                 </div>
 
-                <div className="mt-8">
+                <div className="mt-12">
                     <h2 className="text-xl font-semibold text-black mb-3">Meet Our Team</h2>
                     <p className="text-gray-600 mb-6">
                         We are a team of passionate individuals dedicated to making your experience better every day.
@@ -81,25 +81,28 @@ export default function About() {
                     </div>
                 </div>
 
-                <section className="mt-12 space-y-6">
-                    <div id="faq" className="p-6 border rounded-lg shadow-sm hover:shadow-md transition bg-white text-left">
+                <section className="mt-16 space-y-6">
+                    <div id="faq" className="p-6 border rounded-lg shadow-sm hover:shadow-md transition bg-slate-50 text-left">
                         <h2 className="text-2xl font-semibold text-black">Frequently Asked Questions</h2>
+                        <hr className="h-px mx-2 my-4" /> 
                         <ul className="mt-4 space-y-4">
                             <li><strong>How does the platform work?</strong> Our platform allows users to buy, sell, and exchange fashion items with ease.</li>
                             <li><strong>Is there a fee for selling items?</strong> Listing items is free, but a small service fee applies upon successful transactions.</li>
                             <li><strong>How do I ensure the quality of second-hand clothing?</strong> We encourage sellers to provide detailed descriptions and images, and buyers to check seller ratings.</li>
                         </ul>
                     </div>
-                    <div id="terms" className="p-6 border rounded-lg shadow-sm hover:shadow-md transition bg-white text-left">
+                    <div id="terms" className="p-6 border rounded-lg shadow-sm hover:shadow-md transition bg-slate-50 text-left">
                         <h2 className="text-2xl font-semibold text-black">Terms & Conditions</h2>
+                        <hr className="h-px mx-2 my-4" /> 
                         <ul className="mt-4 space-y-4">
                             <li>Users must provide accurate information when listing items.</li>
                             <li>Any fraudulent activity will result in account suspension.</li>
                             <li>Transactions made outside the platform are not protected by our policies.</li>
                         </ul>
                     </div>
-                    <div id="privacy" className="p-6 border rounded-lg shadow-sm hover:shadow-md transition bg-white text-left">
+                    <div id="privacy" className="p-6 border rounded-lg shadow-sm hover:shadow-md transition bg-slate-50 text-left">
                         <h2 className="text-2xl font-semibold text-black">Privacy Policy</h2>
+                        <hr className="h-px mx-2 my-4" /> 
                         <ul className="mt-4 space-y-4">
                             <li>We collect only necessary information to facilitate transactions.</li>
                             <li>Your data is securely stored and never shared without consent.</li>
