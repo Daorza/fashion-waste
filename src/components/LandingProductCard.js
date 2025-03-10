@@ -1,7 +1,6 @@
 import Image from "next/image";
 
 const LandingProductCard = ({ imgSrc, isNew = false, colors = [], title, price }) => {
-    // Daftar warna yang bisa dipilih
     const availableColors = ["Hitam", "Putih", "Biru", "Pink", "Cokelat"];
 
     return (
@@ -19,7 +18,6 @@ const LandingProductCard = ({ imgSrc, isNew = false, colors = [], title, price }
             </div>
             <p className="text-center tracking-wider text-sm font-light">{title}</p>
 
-            {/* Pilihan Warna */}
             <div className="flex justify-center gap-2">
                 {availableColors.map((color) => (
                     <span

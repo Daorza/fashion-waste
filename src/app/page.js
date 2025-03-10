@@ -20,7 +20,7 @@ const Home = () => {
     }
     return (
             <div className="flex flex-col items-center justify-center">
-                {/* Section 1: Hero Background */}
+
                 <div className="w-full h-dvh relative overflow-hidden">
                     <Image
                         src={"/images/background-2.jpg"}
@@ -31,7 +31,7 @@ const Home = () => {
                         className="w-full h-dvh object-cover object-top"
                     />
                     <div className="w-full h-dvh inset-0 absolute grid items-center justify-end black-transparent-background">
-                        {/* Content with Animation */}
+
                         <div
                             className={`flex flex-col gap-4 md:me-28 items-end md:items-end transition-transform duration-1000 ease-in ${
                                 isAnimated ? `translate-x-0` : `translate-x-full`
@@ -54,7 +54,6 @@ const Home = () => {
                     </div>
                 </div>
 
-                {/* Section 2: White Section */}
                 <div className="w-full  py-20 flex-col md:flex-row md:gap-36 gap-12 flex-auto bg-white flex justify-center items-center">
                     <SalesValueCard icon={
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1} stroke="currentColor" className="size-16">
@@ -82,7 +81,7 @@ const Home = () => {
                         description={"Why do mass buying and increase the fashion waste if you can just trade your old clothes to another?"}
                     />
                 </div>
-                {/* section 3 */}
+
                 <div className="w-full px-6 flex flex-col gap-12 justify-center items-center bg-white">
                     <h1 className="tracking-widest text-2xl font-bold mb-8 uppercase">
                         always good and fresh in every condition
