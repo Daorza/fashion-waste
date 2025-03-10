@@ -7,7 +7,7 @@
       "category": "Men",
       "size": "XL",
       "material": "Katun",
-      "color": "Hitam",
+      "color": ["Hitam"],
       "fit": "Regular",
       "seller": "Anaconda37",
       "description": "Premium-quality fabric, soft and breathable for all-day comfort. Designed with precision stitching for durability and a stylish look. Wrinkle-resistant, fade-resistant, and easy to mix and match for any occasion."
@@ -20,7 +20,7 @@
       "category": "Women",
       "size": "2XL",
       "material": "Women",
-      "color": "Biru",
+      "color": ["Biru"],
       "fit": "Slim",
       "seller": "Meideliene",
       "description": "Premium-quality fabric, soft and breathable for all-day comfort. Designed with precision stitching for durability and a stylish look. Wrinkle-resistant, fade-resistant, and easy to mix and match for any occasion."
@@ -33,7 +33,7 @@
       "category": "Accessories",
       "size": "XL",
       "material": "Denim",
-      "color": "Biru",
+      "color": ["Biru"],
       "fit": "Loose",
       "seller": "Martha_88",
       "description": "Premium-quality fabric, soft and breathable for all-day comfort. Designed with precision stitching for durability and a stylish look. Wrinkle-resistant, fade-resistant, and easy to mix and match for any occasion."
@@ -46,7 +46,7 @@
       "category": "Men",
       "size": "S",
       "material": "Katun",
-      "color": "Putih",
+      "color": ["Putih"],
       "fit": "Regular",
       "seller": "Prince_Warlock",
       "description": "Premium-quality fabric, soft and breathable for all-day comfort. Designed with precision stitching for durability and a stylish look. Wrinkle-resistant, fade-resistant, and easy to mix and match for any occasion."
@@ -59,7 +59,7 @@
       "category": "Women",
       "size": "L",
       "material": "Women",
-      "color": "Hitam",
+      "color": ["Hitam"],
       "fit": "Slim",
       "seller": "Houser898",
       "description": "Premium-quality fabric, soft and breathable for all-day comfort. Designed with precision stitching for durability and a stylish look. Wrinkle-resistant, fade-resistant, and easy to mix and match for any occasion."

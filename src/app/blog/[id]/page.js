@@ -26,13 +26,13 @@ export default function BlogDetail() {
     <div className="my-4 w-fit flex justify-center mx-auto">
       <div className="bg-white rounded-md shadow-md px-6 py-3 max-w-3xl text-justify">
         <Image src={post.imageMain} alt={post.title} width={800} height={800} className="w-full object-cover rounded-md shadow-md" />
-        <h1 className="text-3xl font-bold mt-4">{post.title}</h1>
+        <h1 className="text-3xl font-bold mt-4 capitalize">{post.title}</h1>
         <div className="flex justify-between mt-2">
             <p className="text-gray-500 text-sm">{post.month} <sup>{post.day}</sup> {post.year}</p>
             <p className="text-gray-500 text-sm">{post.writer}</p>
         </div>
         <hr className="my-4" />
-        <p className="text-gray-600 text-sm px-2">{post.description}</p>
+        <p className="text-gray-600 text-sm px-4 pb-8 indent-8">{post.description}</p>
       </div>
     </div>
   );

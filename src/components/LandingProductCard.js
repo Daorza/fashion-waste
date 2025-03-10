@@ -25,9 +25,9 @@ const LandingProductCard = ({ imgSrc, isNew = false, colors = [], title, price }
                     <span
                         key={color}
                         className={`h-4 w-4 rounded-full ${
-                            color === "Hitam" ? "bg-black" : 
-                            color === "Putih" ? "bg-white border border-gray-300" : 
-                            "bg-blue-500"
+                            color === "Hitam" ? "bg-black border border-gray-500" : 
+                            color === "Putih" ? "bg-white border border-gray-500" : 
+                            "bg-blue-700 border border-gray-500"
                         } ${colors.includes(color) ? "cursor-pointer" : "opacity-50 cursor-not-allowed"}`}
                     ></span>
                 ))}
