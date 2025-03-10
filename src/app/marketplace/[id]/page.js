@@ -21,11 +21,10 @@ export default function ProductDetail() {
                 setProduct(foundProduct || null);
 
                 if (foundProduct) {
-                    // Filter produk yang memiliki kategori yang sama, tetapi bukan produk yang sedang dilihat
                     const recommendations = products.filter(
                         (item) => item.category === foundProduct.category && item.id !== foundProduct.id
                     );
-                    setRelatedProducts(recommendations.slice(0, 4)); // Ambil maksimal 4 rekomendasi
+                    setRelatedProducts(recommendations.slice(0, 4)); 
                 }
             } catch (error) {
                 console.error("Failed to fetch product data:", error);
@@ -45,7 +44,6 @@ export default function ProductDetail() {
     return (
         <div className="grid place-items-center w-full py-8">
             <div className="max-w-4xl">
-                {/* Produk Utama */}
                 <div className="grid grid-cols-4 p-4 bg-gray-50 rounded-sm shadow-md">
                     <div className="md:col-span-1 col-span-4">
                         <Image 
@@ -84,7 +82,6 @@ export default function ProductDetail() {
                     </div>
                 </div>
 
-                {/* Form Trade */}
                 <div className="mt-6 p-4 rounded-sm shadow-md bg-gray-50">
                     <h1 className="font-semibold mb-4">Want to trade your own clothes with this one?</h1>
                     <p>You can trade your own clothes with this one. Fill the form on the link below to start the trade.</p>
@@ -95,7 +92,6 @@ export default function ProductDetail() {
                     </Link>
                 </div>
 
-                {/* Rekomendasi Produk */}
                 <div className="mt-8">
                     <h2 className="text-xl font-semibold mb-4">You might also like</h2>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">

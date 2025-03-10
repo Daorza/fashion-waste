@@ -71,8 +71,7 @@ export default function Marketplace() {
 
   return (
     <div className="relative">
-      {/* Mobile Filter Button */}
-      <button
+\      <button
         onClick={() => setIsDrawerOpen(true)}
         className="md:hidden fixed z-30 bottom-4 right-4 bg-gray-50 text-graphite px-4 py-2 rounded-md shadow-lg"
       >
@@ -82,7 +81,6 @@ export default function Marketplace() {
 
       </button>
 
-      {/* Filter Drawer Mobile */}
       <div
         className={`${
           isDrawerOpen ? "translate-x-0" : "-translate-x-full"
@@ -139,20 +137,19 @@ export default function Marketplace() {
             Clear Filters
           </button>
           <div className="px-4 py-2 mt-8 rounded-md shadow-md ">
-                            <p className="text-lg font-semibold capitalize">take a step</p>
-                            <div className="text-sm mt-2">
-                                Start to sell your second-hand clothing at <span className="font-semibold">Fastainable!</span>
-                            </div>
-                            <hr className="h-px my-2" />
-                            <div >
-                                <Link href={'/marketplace/sell'} className="mt-2 py-2 font-medium text-sm underline underline-offset-2 hover:font-semibold">Sell your products</Link>
-                            </div>
+              <p className="text-lg font-semibold capitalize">take a step</p>
+              <div className="text-sm mt-2">
+                  Start to sell your second-hand clothing at <span className="font-semibold">Fastainable!</span>
+              </div>
+              <hr className="h-px my-2" />
+              <div >
+                  <Link href={'/marketplace/sell'} className="mt-2 py-2 font-medium text-sm underline underline-offset-2 hover:font-semibold">Sell your products</Link>
+              </div>
             </div>
         </div>
 
       </div>
           
-      {/* Overlay */}
       {isDrawerOpen && (
         <div
           className="fixed inset-0 bg-black bg-opacity-50 z-10 md:hidden"
@@ -160,36 +157,34 @@ export default function Marketplace() {
         />
       )}
 
-      {/* Desktop Filter */}
       <div className="block md:flex  p-4 md:p-8">
         <div className="h-screen overflow-y-scroll w-1/5 hidden md:block ">
           <div className="m-2 shadow-md rounded-md px-4 py-2 bg-white">
-                      <h1 className="text-lg font-semibold"> Filter Products</h1>
-                      <hr className="h-px my-2" />
-                      {Object.keys(filterOptions).map((filterType) => (
-                          <div key={filterType} className="my-2">
-                              <h2 className="text-base font-semibold capitalize py-2">{filterType}</h2>
-                                  {filterOptions[filterType].map((value) => (
-                                      <label key={value} className="block">
-                                          <input
-                                              type="checkbox"
-                                              checked={filters[filterType].includes(value)}
-                                              onChange={() => handleFilterChange(filterType, value)}
-                                              className="mr-2"
-                                          />
-                                          {value}
-                                      </label>
-                                      ))}
-                              <hr className="h-px my-2" />
-                          </div>
-                              ))}
-                              {/* Clear Filter Button */}
-                              <button
-                                  onClick={clearFilters}
-                                  className="w-full mt-4 bg-red-500 text-white px-4 py-2 rounded shadow hover:bg-red-700 transition"
-                              >
-                                  Clear Filters
-                              </button>
+          <h1 className="text-lg font-semibold"> Filter Products</h1>
+          <hr className="h-px my-2" />
+          {Object.keys(filterOptions).map((filterType) => (
+              <div key={filterType} className="my-2">
+                  <h2 className="text-base font-semibold capitalize py-2">{filterType}</h2>
+                      {filterOptions[filterType].map((value) => (
+                          <label key={value} className="block">
+                              <input
+                                  type="checkbox"
+                                  checked={filters[filterType].includes(value)}
+                                  onChange={() => handleFilterChange(filterType, value)}
+                                  className="mr-2"
+                              />
+                              {value}
+                          </label>
+                          ))}
+                  <hr className="h-px my-2" />
+              </div>
+                  ))}
+                  <button
+                      onClick={clearFilters}
+                      className="w-full mt-4 bg-red-500 text-white px-4 py-2 rounded shadow hover:bg-red-700 transition"
+                  >
+                      Clear Filters
+                  </button>
             </div>
               <div className="px-4 py-2 mt-8 mx-2 rounded-md shadow-md bg-white">
                   <p className="text-lg font-semibold capitalize">take a step</p>
@@ -203,27 +198,25 @@ export default function Marketplace() {
               </div>
         </div>
             
-
-            {/* Product Grid */}
-            <div className="p-4 md:w-4/5 md:h-screen md:overflow-y-scroll w-full">
-                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                      {filteredProducts.map((product) => (
-                          <Link key={product.id} href={`/marketplace/${product.id}`} className="border rounded-lg overflow-hidden bg-white">
-                          <Image
-                              src={product.image}
-                              alt={product.name}
-                              width={300} 
-                              height={400}
-                              className="w-full h-[28rem] md:h-max object-cover object-top p-4"
-                          />
-                          <div className="p-4">
-                              <h3 className="font-semibold capitalize h-12 overflow-clip">{product.name}</h3>
-                              <p className="text-gray-600 h-8">{product.price}</p>
-                          </div>
-                          </Link>
-                      ))}
+        <div className="p-4 md:w-4/5 md:h-screen md:overflow-y-scroll w-full">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                {filteredProducts.map((product) => (
+                    <Link key={product.id} href={`/marketplace/${product.id}`} className="border rounded-lg overflow-hidden bg-white">
+                    <Image
+                        src={product.image}
+                        alt={product.name}
+                        width={300} 
+                        height={400}
+                        className="w-full h-[28rem] md:h-max object-cover object-top p-4"
+                    />
+                    <div className="p-4">
+                        <h3 className="font-semibold capitalize h-12 overflow-clip">{product.name}</h3>
+                        <p className="text-gray-600 h-8">{product.price}</p>
                     </div>
-            </div>
+                    </Link>
+                ))}
+              </div>
+          </div>
       </div>
     </div>
   );

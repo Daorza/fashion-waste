@@ -31,7 +31,6 @@ const SearchForm = ({ CloseSearch, filteredProduct, setQuery, query }) => {
         </button>
       </div>
 
-      {/* Hasil Pencarian */}
       <div className={`bg-white grid md:grid-cols-2 grid-cols-1 gap-4 md:p-8 p-4 mx-2  md:m-4 rounded-[6px] md:max-w-7xl ${filteredProduct.length === 0 ? "opacity-0" : "opacity-100"} transition-opacity ease-in-out duration-300`}>
         {filteredProduct.map((product, index) => (
           index < 4?

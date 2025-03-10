@@ -18,11 +18,11 @@ export default function OrdersReturns() {
                 <div className="bg-white rounded-xl p-6 mb-8 border border-gray-200">
                     <h2 className="font-bold text-lg mb-4 py-4 text-black">Recent Orders</h2>
                     <div className="space-y-4">
-                        {/* Order #12345 */}
+
                         <div className="bg-slate-100 p-4 rounded-lg shadow-sm border border-gray-300">
                             <p className="text-gray-600">Order #12345</p>
                             <p className="font-bold text-black">Status: <span className="text-green-500">Shipped</span></p>
-                            {/* Detail Pesanan */}
+\
                             <div className="mt-2 text-sm text-gray-700">
                                 <p><strong>Item:</strong> Blue Denim Jacket</p>
                                 <p><strong>Quantity:</strong> 1</p>
@@ -31,11 +31,10 @@ export default function OrdersReturns() {
                             </div>
                         </div>
 
-                        {/* Order #12346 */}
                         <div className="bg-slate-100 p-4 rounded-lg shadow-sm border border-gray-300">
                             <p className="text-gray-600">Order #12346</p>
                             <p className="font-bold text-black">Status: <span className="text-yellow-500">Processing</span></p>
-                            {/* Detail Pesanan */}
+
                             <div className="mt-2 text-sm text-gray-700">
                                 <p><strong>Item:</strong> Black Leather Boots</p>
                                 <p><strong>Quantity:</strong> 2</p>

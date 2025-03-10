@@ -22,13 +22,11 @@ export default function Navbar() {
   const [filteredProduct, setFilteredProduct] = useState([])
   const pathname = usePathname();
 
-  // Scroll event handler
   useEffect(() => {
     document.body.style.overflow = isDrawerOpen ? "hidden" : "auto";
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [isDrawerOpen, isSearchOpen, isCartOpen]);
-  // Fetch data saat komponen pertama kali di-mount
   useEffect(() => {
     const fetchProducts = async () => {
       try {
@@ -49,8 +47,6 @@ export default function Navbar() {
     }
   }, []);
 
-
-  // Filter produk setiap kali query berubah
   useEffect(() => {
     if (query.length > 0) {
       setFilteredProduct(
@@ -59,7 +55,7 @@ export default function Navbar() {
         )
       )
     } else {
-      setFilteredProduct([]) // Reset hasil pencarian saat query kosong
+      setFilteredProduct([])
     }
   }, [query, products])
   const CloseSearch = () => {
@@ -71,21 +67,17 @@ export default function Navbar() {
     const scrollTop = window.scrollY || document.documentElement.scrollTop;
     setScrollPosition(scrollTop);
   };
-  // Toggle drawer state
   const toggleDrawer = () => {
     setIsDrawerOpen(!isDrawerOpen);
     closeSearch();
   };
-  // Close drawer
   const closeDrawer = () => {
     setIsDrawerOpen(false);
   };
-  //toggle search
   const toggleSearch = () =>{
     setIsSearchOpen(!isSearchOpen);
     closeDrawer();
   }
-  //close search
   const closeSearch = () => {
     setIsSearchOpen(false);
   }
@@ -105,8 +97,6 @@ export default function Navbar() {
   }
   return (
     <>
-      {/* Drawer overlay */}
-      {/* Overlay for Drawer & Search */}
       {(isDrawerOpen || isCartOpen) && (
         <div
           className="fixed inset-0 z-50 bg-black bg-opacity-50"
@@ -120,7 +110,6 @@ export default function Navbar() {
         />
       )}
 
-       {/* Search Drawer */}
        <div
         className={`fixed top-0 left-0 mt-16 w-full bg-transparent z-30 transition-transform duration-500 ease-in-out ${
           isSearchOpen ? "translate-y-0" : "-translate-y-96"
@@ -128,25 +117,21 @@ export default function Navbar() {
       >
         <SearchForm CloseSearch={CloseSearch} filteredProduct={filteredProduct} setQuery={setQuery} query={query}/>
       </div>
-      {/* Cart Drawer */}
       <div className={`${isCartOpen ? "translate-x-0" : "translate-x-full"} fixed z-50 top-0 right-0 h-screen w-80 md:w-96 bg-white shadow-lg transition-transform duration-300 ease-in-out`}> 
         <CartContent closeCart={closeCart}/>
       </div>
-      {/* Mobile Menu Drawer */}
       <div
         className={`${isDrawerOpen ? "translate-x-0" : "-translate-x-full"} fixed z-50 top-0 left-0 h-screen w-64 bg-white transition-transform duration-300 ease-in-out md:hidden`}
       >
         <MobileSidebar setDefault={setDefault}/>
       </div>
 
-      {/* Main Navbar */}
       <nav
         className={`fixed w-full z-30 transition-shadow duration-500 ${scrollPosition > 10 ? "shadow-md" : pathname == Routes.Home ? "shadow-none" : "shadow-md"} ${pathname == "/auth/login" || pathname == "/auth/register" ? "hidden" : "block"}`}
       >
         <div
           className={`flex justify-between items-center h-16 px-4 md:px-16 transition-all duration-500 ease-in-out ${scrollPosition > 10 || isDrawerOpen || isSearchOpen ? "bg-white text-black" : pathname == "/" ? "bg-transparent text-white" : "bg-white text-black"} hover:bg-white hover:text-black`}
         >
-          {/* Mobile Menu Button */}
           <div className="md:hidden">
             <button
               aria-label="Open menu"
@@ -165,7 +150,6 @@ export default function Navbar() {
             </button>
           </div>
 
-          {/* Logo and Desktop Nav */}
           <div className="flex justify-center gap-12 items-center">
             <Link href="/" className="font-bold text-2xl font-sans tracking-widest">FASTAINABLE</Link>
             <div className="md:flex hidden justify-start items-center gap-8 mt-1 font-extralight tracking-widest text-sm uppercase">
@@ -175,14 +159,12 @@ export default function Navbar() {
             </div>
           </div>
 
-          {/* Icons */}
           <div className="flex justify-end md:gap-6 gap-4">
             <Link href={`${userEmail != null?"/seller_profile":"/auth/login"}`} className="md:block hidden cursor-pointer">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
               </svg>
             </Link>
-            {/* search button */}
             <button  className="cursor-pointer" onClick={toggleSearch}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -199,7 +181,6 @@ export default function Navbar() {
                 />
               </svg>
             </button>
-              {/* cart button */}
             <button  className="cursor-pointer" onClick={()=>toggleCart()}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -220,7 +201,6 @@ export default function Navbar() {
         </div>
       </nav>
       
-      {/* Placeholder for Navbar Height */}
       <div className={`h-16 ${pathname == "/auth/login" || pathname == "/auth/register" || pathname == "/" ? "hidden" : "block"}`} ></div>
     </>
   );

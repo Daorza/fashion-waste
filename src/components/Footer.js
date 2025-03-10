@@ -5,9 +5,7 @@ export default function Footer() {
     const pathname = usePathname();
     return (
         <footer className={`bg-graphite text-amber-50 text-center px-4 py-2 ${pathname == "/auth/login" || pathname == "/auth/register" ? "hidden" : "block"}`}>
-            {/* Container utama */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 md:p-8">
-                {/* Kolom pertama: Deskripsi dan media sosial */}
                 <div className="text-left">
                     <p className="font-bold uppercase text-3xl md:text-4xl tracking-wider">fastainable</p>
                     <p className="mt-4 text-sm tracking-wide max-w-sm md:max-w-md">

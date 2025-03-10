@@ -15,12 +15,6 @@ export default function Blog() {
     fetchBlogs();
   }, []);
 
-    // const posts = [
-    //     { id: 1, title: "The Future of Fashion", excerpt: "Exploring sustainable and tech-driven trends.", image: "/images/blog1.jpg" },
-    //     { id: 2, title: "Minimalist Wardrobe", excerpt: "How to build a stylish, clutter-free closet.", image: "/images/blog2.jpg" },
-    //     { id: 3, title: "Streetwear Evolution", excerpt: "The rise of urban fashion and its impact.", image: "/images/blog3.jpg" },
-    // ];
-
     return (
         <main className="bg-gray-100 min-h-screen py-12 px-6 sm:px-12">
             <div className="max-w-4xl mx-auto text-center mb-8">

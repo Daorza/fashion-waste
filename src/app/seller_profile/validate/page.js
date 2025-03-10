@@ -19,7 +19,6 @@ export default function Validate() {
                     <p className="text-gray-600 mb-6">Review and confirm if you want to proceed with the trade.</p>
                     
                     <div className="grid grid-cols-2 gap-4">
-                        {/* Your Item */}
                         <div className="border p-4 rounded-lg shadow-sm bg-gray-50">
                             <h2 className="text-lg font-semibold text-black">Your Item</h2>
                             <Image src="/models/models6.jpg" width={500} height={500} alt="Your Item" className="mx-auto mt-2 h-96 object-cover rounded-md" />
@@ -28,7 +27,6 @@ export default function Validate() {
                             <p className="text-gray-700">Condition: Gently Used</p>
                         </div>
                         
-                        {/* Requested Item */}
                         <div className="border p-4 rounded-lg shadow-sm bg-gray-50">
                             <h2 className="text-lg font-semibold text-black">Trade With</h2>
                             <Image src="/models/models3.jpg" width={500} height={500} alt="Requested Item" className="mx-auto mt-2 h-96 object-cover rounded-md" />
