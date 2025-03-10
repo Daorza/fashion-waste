@@ -23,16 +23,16 @@ const CartContent = ({closeCart}) => {
                 <div className="flex flex-col gap-4">
                 {
                     cartItems.map((carts, index)=> {
-                        return  <div key={index} className="border flex rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+                        return  <div key={index} className="border flex rounded-lg overflow-hidden shadow-md hover:shadow-lg transition md:h-32 h-28">
                                     <Image
                                         src={carts.image}
                                         alt={'lalala'}
                                         width={300}
                                         height={400}
-                                        className="md:w-32 w-28 md:h-32 h-28 object-top object-cover rounded-md"
+                                        className="md:w-32 w-28 h-full object-top object-cover rounded-md"
                                     />
                                     <div className="p-4">
-                                        <h3 className="font-semibold tracking-wider h-8 overflow-clip">{carts.name}</h3>
+                                        <h3 className="font-semibold tracking-wider line-clamp-1 overflow-clip">{carts.name}</h3>
                                         <p className="text-gray-600 h-8  text-sm overflow-clip">{carts.price}</p>
                                         <div className="flex items-center border rounded-md w-fit px-1">
                                             <button

@@ -157,7 +157,7 @@ export default function Marketplace() {
         />
       )}
 
-      <div className="block md:flex  p-4 md:p-8">
+      <div className="block md:flex  p-2 md:p-8">
         <div className="h-screen overflow-y-scroll w-1/5 hidden md:block ">
           <div className="m-2 shadow-md rounded-md px-4 py-2 bg-white">
           <h1 className="text-lg font-semibold"> Filter Products</h1>
@@ -198,8 +198,8 @@ export default function Marketplace() {
               </div>
         </div>
             
-        <div className="p-4 md:w-4/5 md:h-screen md:overflow-y-scroll w-full">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div className="md:p-4 p-2 md:w-4/5 md:h-screen md:overflow-y-scroll w-full">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 md:gap-4 gap-1">
                 {filteredProducts.map((product) => (
                     <Link key={product.id} href={`/marketplace/${product.id}`} className="border rounded-lg overflow-hidden bg-white">
                     <Image
@@ -207,9 +207,9 @@ export default function Marketplace() {
                         alt={product.name}
                         width={300} 
                         height={400}
-                        className="w-full h-[28rem] md:h-max object-cover object-top p-4"
+                        className="w-full h-[14rem] md:h-max object-cover object-top md:p-4 p-2"
                     />
-                    <div className="p-4">
+                    <div className="p-2 md:p-4">
                         <h3 className="font-semibold capitalize h-12 overflow-clip">{product.name}</h3>
                         <p className="text-gray-600 h-8">{product.price}</p>
                     </div>

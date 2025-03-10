@@ -152,7 +152,7 @@ export default function Navbar() {
 
           <div className="flex justify-center gap-12 items-center">
             <Link href="/" className="font-bold text-2xl font-sans tracking-widest">FASTAINABLE</Link>
-            <div className="md:flex hidden justify-start items-center gap-8 mt-1 font-extralight tracking-widest text-sm uppercase">
+            <div className="md:flex hidden justify-start items-center gap-8 mt-1 font-extralight tracking-widest text-sm uppercase  transition-all duration-300">
             <DesktopNavLink text="shop" href="/marketplace" isActive={pathname === "/marketplace"} setDefault={() => setDefault()} />
             <DesktopNavLink text="blog" href="/blog" isActive={pathname === "/blog"} setDefault={() => setDefault()} />
             <DesktopNavLink text="about" href="/about" isActive={pathname === "/about"} setDefault={() => setDefault()} />

@@ -38,7 +38,7 @@ const SearchForm = ({ CloseSearch, filteredProduct, setQuery, query }) => {
             <Image src={product.image} alt={product.name} height={100} width={100} className="w-20 h-20 md:w-24 md:h-24 object-cover object-top rounded-[8px]" />
             <div>
               <h3 className="md:text-lg font-medium">{product.name}</h3>
-              <p className="text-sm">{product.description}</p>
+              <p className="text-sm line-clamp-2">{product.description}</p>
               <p className="text-sm text-gray-600">Price: {product.price}</p>
             </div>
           </Link>

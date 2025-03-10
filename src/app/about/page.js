@@ -74,7 +74,7 @@ export default function About() {
                             <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border shadow-md hover:shadow-lg">
                                 <Image width={1000} height={1000} src="/images/naufal.jpg" alt="Naufal Bintang Pradana H" className="w-full h-full object-cover" />
                             </div>
-                            <h3 className="text-md font-semibold text-black tracking-wide">Naufal Bintanga Pradana H</h3>
+                            <h3 className="text-md font-semibold text-black tracking-wide">Naufal Bintang Pradana H</h3>
                         </div>
                     </div>
                 </div>
