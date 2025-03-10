@@ -6,8 +6,8 @@ import axios from "axios";
 
 const filterOptions = {
   category: ["Men", "Women", "Accessories"],
-  size: ["S", "M", "L", "XL", "2XL"],
-  material: ["Katun", "Denim", "Poliester"],
+  size: ["S", "M", "L", "XL", "2XL", "Standard"],
+  material: ["Katun", "Denim", "Poliester", "Plastic"],
   color: ["Hitam", "Putih", "Biru"],
   fit: ["Slim", "Regular", "Loose"],
 };

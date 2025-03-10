@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const LandingProductCard = ({ imgSrc, isNew = false, colors = [], title, price }) => {
     // Daftar warna yang bisa dipilih
-    const availableColors = ["Hitam", "Putih", "Biru"];
+    const availableColors = ["Hitam", "Putih", "Biru", "Pink", "Cokelat"];
 
     return (
         <div className="col-span-1 flex flex-col gap-4">
@@ -27,8 +27,10 @@ const LandingProductCard = ({ imgSrc, isNew = false, colors = [], title, price }
                         className={`h-4 w-4 rounded-full ${
                             color === "Hitam" ? "bg-black border border-gray-500" : 
                             color === "Putih" ? "bg-white border border-gray-500" : 
+                            color === "Pink" ? "bg-pink-500 border border-gray-500" : 
+                            color === "Cokelat" ? "bg-orange-900 border border-gray-500" : 
                             "bg-blue-700 border border-gray-500"
-                        } ${colors.includes(color) ? "cursor-pointer" : "opacity-50 cursor-not-allowed"}`}
+                        } ${colors.includes(color) ? "cursor-pointer" : "opacity-30 cursor-not-allowed"}`}
                     ></span>
                 ))}
             </div>
