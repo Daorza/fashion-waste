@@ -5,7 +5,7 @@ import Link from "next/link";
 import axios from "axios";
 
 const filterOptions = {
-  category: ["Men", "Women", "accessories"],
+  category: ["Men", "Women", "Accessories"],
   size: ["S", "M", "L", "XL", "2XL"],
   material: ["Katun", "Denim", "Poliester"],
   color: ["Hitam", "Putih", "Biru"],

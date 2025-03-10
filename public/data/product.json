@@ -5,7 +5,7 @@
       "price": "Rp50.000",
       "image": "/models/models1.jpg",
       "category": "Men",
-      "size": "L",
+      "size": "XL",
       "material": "Katun",
       "color": "Hitam",
       "fit": "Regular",
@@ -17,12 +17,12 @@
       "name": "Premium Polo Shirt",
       "price": "Rp125.000",
       "image": "/models/models2.jpg",
-      "category": "Polo",
-      "size": "M",
+      "category": "Women",
+      "size": "2XL",
       "material": "Women",
       "color": "Biru",
       "fit": "Slim",
-      "seller": "Anaconda37",
+      "seller": "Meideliene",
       "description": "Premium-quality fabric, soft and breathable for all-day comfort. Designed with precision stitching for durability and a stylish look. Wrinkle-resistant, fade-resistant, and easy to mix and match for any occasion."
     },
     {
@@ -35,7 +35,7 @@
       "material": "Denim",
       "color": "Biru",
       "fit": "Loose",
-      "seller": "Anaconda37",
+      "seller": "Martha_88",
       "description": "Premium-quality fabric, soft and breathable for all-day comfort. Designed with precision stitching for durability and a stylish look. Wrinkle-resistant, fade-resistant, and easy to mix and match for any occasion."
     },
     {
@@ -48,7 +48,7 @@
       "material": "Katun",
       "color": "Putih",
       "fit": "Regular",
-      "seller": "Anaconda37",
+      "seller": "Prince_Warlock",
       "description": "Premium-quality fabric, soft and breathable for all-day comfort. Designed with precision stitching for durability and a stylish look. Wrinkle-resistant, fade-resistant, and easy to mix and match for any occasion."
     },
     {
@@ -56,12 +56,12 @@
       "name": "Premium Polo Shirt",
       "price": "Rp125.000",
       "image": "/models/models5.jpg",
-      "category": "Polo",
+      "category": "Women",
       "size": "L",
       "material": "Women",
       "color": "Hitam",
       "fit": "Slim",
-      "seller": "Anaconda37",
+      "seller": "Houser898",
       "description": "Premium-quality fabric, soft and breathable for all-day comfort. Designed with precision stitching for durability and a stylish look. Wrinkle-resistant, fade-resistant, and easy to mix and match for any occasion."
     },
     {
@@ -72,9 +72,9 @@
       "category": "Accessories",
       "size": "M",
       "material": "Denim",
-      "color": "Biru",
+      "color": ["Biru", "Hitam"],
       "fit": "Regular",
-      "seller": "Anaconda37",
+      "seller": "Georgegigi",
       "description": "Premium-quality fabric, soft and breathable for all-day comfort. Designed with precision stitching for durability and a stylish look. Wrinkle-resistant, fade-resistant, and easy to mix and match for any occasion."
     }
   ]

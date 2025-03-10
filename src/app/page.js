@@ -87,29 +87,21 @@ const Home = () => {
                     <h1 className="tracking-widest text-2xl font-bold mb-8 uppercase">
                         always good and fresh in every condition
                     </h1>
+
                     <div className="grid md:grid-cols-4 grid-cols-1 gap-4 max-w-[92rem]">
-                        {/* grid items */}
-                        {
-                            product.map((dat, index)=>{
-                                return <Link key={index} href={`/marketplace/${product.id}`}>
+                        {product.map((dat, index) => (
+                            <Link key={index} href={`/marketplace/${dat.id}`}>
                                 <LandingProductCard
-                                key={index}
-                                imgSrc={dat.image}
-                                colorChoice={
-                                    <div className="flex justify-center gap-2">
-                                        <span className="h-4 w-4 bg-blue-950 rounded-full"></span>
-                                        <span className="h-4 w-4 bg-blue-950 rounded-full"></span>
-                                        <span className="h-4 w-4 bg-blue-950 rounded-full"></span>
-                                    </div>
-                                }
-                                isNew = {true}
-                                price={dat.price}
-                                tiitle={dat.name}
-                            />
-                                </Link>
-                            })
-                        }
-                    </div>    
+                                    imgSrc={dat.image}
+                                    colors={[dat.color]}
+                                    isNew={true}
+                                    price={dat.price}
+                                    title={dat.name}
+                                />
+                            </Link>
+                        ))}
+                    </div>
+
                     <div className="mt-12">
                         <Link href={"/shop"} className="py-4 px-12 border-2 border-graphite rounded-lg text-white font-bold tracking-widest bg-graphite hover:text-graphite hover:bg-transparent transition-all duration-200 ">
                             VIEW ALL PRODUCT
