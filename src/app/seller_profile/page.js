@@ -2,10 +2,8 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
 
 export default function Profile() {
-    const [points, setPoints] = useState(20);
     const pointsNeeded = 100;
     const progress = (points / pointsNeeded) * 100;
 
@@ -56,7 +54,7 @@ export default function Profile() {
                 <div className="bg-gray-100 rounded-xl p-6 border border-gray-300 mb-8 shadow-sm">
                     <h2 className="font-bold text-lg text-black mb-4">Recent Activities</h2>
                     <ul className="space-y-2 text-gray-600 ml-2">
-                        <li>🪙 Purchased "Oversize T-Shirt" - Earned 10 points</li>
+                        <li>🪙 Purchased &quot Oversize T-Shirt &quot - Earned 10 points</li>
                         <li>✅ Referred a friend - Earned 15 points</li>
                         <li>🔍 Validated account - Earned 5 points</li>
                     </ul>

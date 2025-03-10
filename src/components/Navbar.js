@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
-import Image from "next/image";
 import Routes from "../routes/routes";
 import axios from "axios"
 import MobileSidebar from "./particular_nav/MobileSidebar";

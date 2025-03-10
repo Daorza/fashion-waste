@@ -48,10 +48,10 @@ export default function ProductDetail() {
         <div className="flex flex-col items-center min-h-screen gap-8">
             <div className="w-full py-8 md:py-16 border-b flex flex-col gap-4 justify-center">
                     <h1 className="text-center text-primary font-bold md:text-2xl text-xl tracking-widest">
-                        SEARCH RESULT FOR " {query} "
+                        SEARCH RESULT FOR &quot {query} &quot
                     </h1>
                     <p className="text-center ">
-                        Showing <span className="font-bold">{filteredProducts.length}</span> results for " {query} "
+                        Showing <span className="font-bold">{filteredProducts.length}</span> results for &quot {query} &quot
                     </p>
             </div>
             <div className="max-w-7xl w-full px-4">

@@ -1,3 +1,4 @@
+import Image from "next/image";
 export default function About() {
     return (
         <main className="flex items-center justify-center py-12 bg-gray-100">
@@ -59,19 +60,19 @@ export default function About() {
                     <div className="grid md:grid-cols-3 gap-6">
                         <div className="text-center">
                             <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border shadow-md hover:shadow-lg">
-                                <img src="/images/nugi.jpeg" alt="Nugroho Nur Cahyo" className="w-full h-full object-cover" />
+                                <Image width={1000} height={1000} src="/images/nugi.jpeg" alt="Nugroho Nur Cahyo" className="w-full h-full object-cover" />
                             </div>
                             <h3 className="text-md font-semibold text-black">Nugroho Nur Cahyo</h3>
                         </div>
                         <div className="text-center">
                             <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border shadow-md hover:shadow-lg">
-                                <img src="/images/reza.jpeg" alt="Muhammad Reza Hafizzi" className="w-full h-full object-cover" />
+                                <Image width={1000} height={1000} src="/images/reza.jpeg" alt="Muhammad Reza Hafizzi" className="w-full h-full object-cover" />
                             </div>
                             <h3 className="text-md font-semibold text-black">Muhammad Reza Hafizzi</h3>
                         </div>
                         <div className="text-center">
                             <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border shadow-md hover:shadow-lg">
-                                <img src="/images/naufal.jpg" alt="Naufal Bintang Pradana H" className="w-full h-full object-cover" />
+                                <Image width={1000} height={1000} src="/images/naufal.jpg" alt="Naufal Bintang Pradana H" className="w-full h-full object-cover" />
                             </div>
                             <h3 className="text-md font-semibold text-black">Naufal Bintanga Pradana H</h3>
                         </div>

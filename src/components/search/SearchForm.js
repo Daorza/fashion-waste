@@ -1,11 +1,8 @@
 import Image from "next/image"
 import Link from "next/link"
 import Routes from "../../routes/routes"
-import { useRouter } from "next/router"
 
 const SearchForm = ({ CloseSearch, filteredProduct, setQuery, query }) => {
-
-  const router = useRouter;
   return (
     <div className="flex flex-col gap-4">
       <div className="bg-white flex md:px-16 py-2 gap-4 md:text-xl justify-between items-center px-4 border-b border-t">

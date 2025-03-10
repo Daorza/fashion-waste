@@ -13,17 +13,17 @@ export default function Footer() {
                     <p className="mt-4 text-sm tracking-wide max-w-sm md:max-w-md">
                     Extend the life cycle of fashion and move away from fast fashion for a more sustainable future. Embrace conscious consumption and responsible recycling to reduce environmental impact.                     </p>
                     <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 mt-4">
-                        <Link href="#" className="hover:underline hover:font-medium flex">
+                        <Link href="https://ww.instagram.com/ifest_uajy" target="_blank" className="hover:underline hover:font-medium flex">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-4 mt-1 mr-2">
                                 <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
                             </svg>
                             Instagram
                         </Link>
-                        <Link href="#" className="hover:underline hover:font-medium flex">
+                        <Link href="https://www.youtube.com/@ifestuajy" target="_blank" className="hover:underline hover:font-medium flex">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-4 mt-1 mr-2">
                                 <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
                             </svg>
-                            TikTok
+                            YouTube 
                         </Link>
                     </div>
                 </div>

@@ -34,7 +34,7 @@ const Home = () => {
                         {/* Content with Animation */}
                         <div
                             className={`flex flex-col gap-4 md:me-28 items-end md:items-end transition-transform duration-1000 ease-in ${
-                                isAnimated ? "translate-x-0" : "translate-x-full"
+                                isAnimated ? `translate-x-0` : `translate-x-full`
                             } px-2 md:p-0`}
                             id="landing-content"
                         >
@@ -163,8 +163,8 @@ const Home = () => {
                                     <p className="text-sm mt-6 mx-4 px-2 line-clamp-6 sm:line-clamp-none sm:px-4 text-justify">
                                         The 2025 Paris Fashion Week delivered a breathtaking array of designs, solidifying its place as the pinnacle of global fashion. This season, top designers showcased a mix of avant-garde creativity, timeless elegance, and bold reinventions of classic styles.
                                         Among the standout collections, Chanel captivated audiences with modernized tweed ensembles, intricate embellishments, and an ethereal pastel palette. Balenciaga pushed the boundaries of futuristic fashion with oversized silhouettes, exaggerated proportions, and sleek, dystopian aesthetics. Meanwhile, Dior embraced romanticism, featuring delicate lace, flowing gowns, and an emphasis on refined femininity.
-                                        On the edgier side, Rick Owens made a statement with sculptural, almost otherworldly designs, while Saint Laurent brought back its signature dark glamour with sharply tailored suits and luxurious leather pieces. Louis Vuitton seamlessly blended heritage and innovation, presenting structured outerwear and intricate embroidery that paid homage to the brand's rich history.
-                                        From striking haute couture to daring streetwear influences, the 2025 PFW set the tone for the year's biggest trends, proving once again why Paris remains the heartbeat of high fashion.
+                                        On the edgier side, Rick Owens made a statement with sculptural, almost otherworldly designs, while Saint Laurent brought back its signature dark glamour with sharply tailored suits and luxurious leather pieces. Louis Vuitton seamlessly blended heritage and innovation, presenting structured outerwear and intricate embroidery that paid homage to the brand &apos s rich history.
+                                        From striking haute couture to daring streetwear influences, the 2025 PFW set the tone for the year&quot s biggest trends, proving once again why Paris remains the heartbeat of high fashion.
                                     </p>
                                     <div className="mt-6 flex justify-center sm:mt-12">
                                         <Link 

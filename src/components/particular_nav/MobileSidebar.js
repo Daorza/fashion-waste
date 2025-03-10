@@ -1,4 +1,3 @@
-import Link from "next/link";
 import MobileNavLink from "./MobileNavLink";
 import { usePathname } from "next/navigation";
 const MobileSidebar = ({ setDefault }) => {
