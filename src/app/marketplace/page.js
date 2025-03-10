@@ -164,7 +164,7 @@ export default function Marketplace() {
       <div className="block md:flex  p-4 md:p-8">
         <div className="h-screen overflow-y-scroll w-1/5 hidden md:block ">
           <div className="m-2 shadow-md rounded-md px-4 py-2 bg-white">
-                      <h1 className="text-lg font-semibold">Filter Products</h1>
+                      <h1 className="text-lg font-semibold"> Filter Products</h1>
                       <hr className="h-px my-2" />
                       {Object.keys(filterOptions).map((filterType) => (
                           <div key={filterType} className="my-2">
@@ -214,7 +214,7 @@ export default function Marketplace() {
                               alt={product.name}
                               width={300} 
                               height={400}
-                              className="w-full h-48 md:h-max object-cover object-top p-4"
+                              className="w-full h-[28rem] md:h-max object-cover object-top p-4"
                           />
                           <div className="p-4">
                               <h3 className="font-semibold capitalize h-12 overflow-clip">{product.name}</h3>
