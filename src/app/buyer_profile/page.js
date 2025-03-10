@@ -1,68 +1,75 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
-export default function Profile() {
-    return (
-        <main>
-            <div className="bg-black text-white text-center p-2 text-sm font-medium">
-                <span className="font-bold">30%</span> OFF-FULL PRICE AND SALE
-            </div>
+import { useState } from "react";
 
-            <nav className="border-b py-3 bg-white">
-                <div className="container mx-auto px-4 flex justify-center space-x-10 text-sm">
-                    <Link href="/profile/validate" className="text-black hover:text-gray-600 transition">Validate</Link>
-                    <a href="#" className="text-black hover:text-gray-600 transition">Gift Cards</a>
+export default function BuyerProfile() {
+    const [points, setPoints] = useState(50);
+    const pointsNeeded = 100;
+    const progress = (points / pointsNeeded) * 100;
+
+    return (
+        <main className="bg-white text-black min-h-screen">
+            <nav className="border-b border-gray-300 py-3 bg-gray-100 shadow-sm">
+                <div className="max-w-3xl mx-auto px-4 flex justify-center space-x-4 text-sm flex-wrap">
+                    <Link href="/buyer_profile/" className="text-black font-bold hover:text-gray-600 transition">Profile</Link>
+                    <Link href="/buyer_profile/orders/" className="text-black hover:text-gray-600 transition">Orders</Link>
+                    <Link href="/buyer_profile/wishlist/" className="text-black hover:text-gray-600 transition">Wishlist</Link>
+                    <Link href="/buyer_profile/settings/" className="text-black hover:text-gray-600 transition">Settings</Link>
                 </div>
             </nav>
 
-            <div className="container mx-auto px-4 py-8">
-                <div className="flex items-center mb-6">
-                    <div className="mr-4">
+            <div className="max-w-3xl mx-auto px-4 py-8">
+                <div className="flex flex-col sm:flex-row items-center sm:items-start mb-6">
+                    <div className="mr-0 sm:mr-4 mb-4 sm:mb-0">
                         <Image 
                             src="/images/cat.jpg" 
                             alt="Profile Photo" 
                             width={80} 
                             height={80} 
-                            className="w-20 h-20 rounded-full border-4 border-gray-300 object-cover"
+                            className="w-20 h-20 sm:w-24 sm:h-24 rounded-full border-4 border-gray-400 object-cover"
                         />
                     </div>
-                    <div>
-                        <h1 className="text-3xl font-bold text-black">arixa</h1>
-                        <div className="flex items-center mt-1">
-                            <span className="bg-gray-100 text-black px-3 py-1 rounded-full text-sm font-medium">
-                                $20 points to spend
+                    <div className="ml-4 text-center sm:text-left">
+                        <h1 className="text-2xl sm:text-3xl font-bold text-black"></h1>
+                        <div className="flex justify-center sm:justify-start mt-2">
+                            <span className="bg-gray-200 text-black px-4 py-2 rounded-full text-sm tracking-wide font-medium shadow-md flex items-center space-x-1 border border-gray-400">
+                                <span>⭐</span>
+                                <span>{points} points available</span>
                             </span>
                         </div>
+                        <button className="mt-4 px-2 text-sm texttext-black underline transition">
+                            Edit Profile
+                        </button>
                     </div>
                 </div>
 
-                <div className="bg-gray-100 rounded-xl p-6 mb-8 border border-gray-200">
-                    <h2 className="font-bold text-lg mb-4 text-black">YOUR VOUCHERS</h2>
-                    <div className="space-y-4">
-                        <p className="text-gray-600">🎁 You don't have any vouchers currently.</p>
-                        <p className="text-gray-600">🔒 You need 100 more points to unlock discount vouchers</p>
-                        <a href="#" className="inline-flex items-center text-black font-semibold hover:text-gray-600 transition">
-                            HOW TO EARN MORE POINTS
-                            <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
-                            </svg>
-                        </a>
+                <div className="bg-gray-100 rounded-xl p-6 mb-8 border border-gray-300">
+                    <h2 className="font-bold text-lg mb-4 text-black">Points Progress</h2>
+                    <div className="relative w-full bg-gray-300 rounded-full h-4">
+                        <div className="bg-green-500 h-4 rounded-full" style={{ width: `${progress}%` }}></div>
                     </div>
+                    <p className="text-gray-600 text-sm mt-2">You need {pointsNeeded - points} more points to unlock rewards.</p>
                 </div>
 
-                <div className="bg-gray-100 rounded-xl p-6 border border-gray-200">
-                    <h2 className="font-bold text-lg mb-4 text-black">PURCHASE HISTORY</h2>
-                    <div className="space-y-4">
-                        <div className="p-4 bg-white rounded-lg shadow">
-                            <h3 className="text-black font-semibold">Product Name</h3>
-                            <p className="text-gray-600">Order Date: 2024-03-06</p>
-                            <p className="text-gray-600">Status: Delivered</p>
-                        </div>
-                        <div className="p-4 bg-white rounded-lg shadow">
-                            <h3 className="text-black font-semibold">Product Name</h3>
-                            <p className="text-gray-600">Order Date: 2024-02-15</p>
-                            <p className="text-gray-600">Status: Shipped</p>
-                        </div>
-                    </div>
+                <div className="bg-gray-100 rounded-xl p-6 border border-gray-300 mb-8 shadow-sm">
+                    <h2 className="font-bold text-lg text-black mb-4">Recent Orders</h2>
+                    <ul className="space-y-2 text-gray-600 ml-2">
+                        <li>📦 Ordered "Oversize T-Shirt" - Expected Delivery: 3 days</li>
+                        <li>✅ Completed "Denim Pants" - Delivered</li>
+                        <li>🛒 Added "Premium Polo Shirt" to Wishlist</li>
+                    </ul>
+                </div>
+
+                <div className="bg-gray-100 rounded-xl p-6 border border-gray-300 shadow-sm">
+                    <h2 className="font-bold text-lg text-black mb-2">Account Settings</h2>
+                    <p className="text-gray-600 max-w-md mb-4 ml-2">
+                        Manage your account preferences and security settings.
+                    </p>
+                    <Link href="/buyer_profile/settings/" className="px-4 py-2 ml-2 bg-red-500 text-white text-sm rounded-lg hover:bg-red-600 transition">
+                        Edit Settings
+                    </Link>
                 </div>
             </div>
         </main>

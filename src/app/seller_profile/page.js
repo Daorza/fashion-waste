@@ -56,7 +56,7 @@ export default function Profile() {
                 <div className="bg-gray-100 rounded-xl p-6 border border-gray-300 mb-8 shadow-sm">
                     <h2 className="font-bold text-lg text-black mb-4">Recent Activities</h2>
                     <ul className="space-y-2 text-gray-600 ml-2">
-                        <li>🪙 Purchased "Wireless Mouse" - Earned 10 points</li>
+                        <li>🪙 Purchased "Oversize T-Shirt" - Earned 10 points</li>
                         <li>✅ Referred a friend - Earned 15 points</li>
                         <li>🔍 Validated account - Earned 5 points</li>
                     </ul>
