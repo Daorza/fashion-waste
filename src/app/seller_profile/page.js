@@ -4,9 +4,6 @@ import Link from "next/link";
 import Image from "next/image";
 
 export default function Profile() {
-    const pointsNeeded = 100;
-    const progress = (points / pointsNeeded) * 100;
-
     return (
         <main className="bg-white text-black min-h-screen">
             <nav className="border-b border-gray-300 py-3 bg-gray-100 shadow-sm">
@@ -34,7 +31,7 @@ export default function Profile() {
                         <div className="flex justify-center sm:justify-start mt-2">
                             <span className="bg-gray-200 text-black px-4 py-2 rounded-full text-sm tracking-wide font-medium shadow-md flex items-center space-x-1 border border-gray-400">
                                 <span>⭐</span>
-                                <span>{points} points to spend</span>
+                                <span>20 points to spend</span>
                             </span>
                         </div>
                         <button className="mt-4 px-2 text-sm text-gray-600 hover:text-black underline transition">
@@ -46,9 +43,9 @@ export default function Profile() {
                 <div className="bg-gray-100 rounded-xl p-6 mb-8 border border-gray-300">
                     <h2 className="font-bold text-lg mb-4 text-black">Points Progress</h2>
                     <div className="relative w-full bg-gray-300 rounded-full h-4">
-                        <div className="bg-green-500 h-4 rounded-full" style={{ width: `${progress}%` }}></div>
+                        <div className="bg-green-500 h-4 rounded-full w-2/5"></div>
                     </div>
-                    <p className="text-gray-600 text-sm mt-2">You need {pointsNeeded - points} more points to unlock your next voucher.</p>
+                    <p className="text-gray-600 text-sm mt-2">You need 80 more points to unlock your next voucher.</p>
                 </div>
 
                 <div className="bg-gray-100 rounded-xl p-6 border border-gray-300 mb-8 shadow-sm">
