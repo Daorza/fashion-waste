@@ -21,18 +21,18 @@ export default function GiftCards() {
                         <label className="block text-sm font-medium text-gray-700">Enter Gift Card Code</label>
                         <input type="text" className="mt-1 p-2 w-full border rounded-lg focus:ring focus:ring-gray-300" placeholder="Enter code here" />
                     </div>
-                    <button className="bg-black text-white px-4 py-2 rounded-lg w-full hover:bg-gray-800 transition">Redeem</button>
+                    <Link href={"/seller_profile"} className="bg-black text-white px-8 py-4 mt-2 rounded-md  w-full hover:bg-gray-800 transition">Redeem</Link>
 
                     <div className="mt-6 border-t pt-6">
                         <h2 className="text-lg font-bold text-black mb-3">Purchase a Gift Card</h2>
                         <p className="text-gray-600 mb-4">Select an amount and send a gift card to a friend or yourself.</p>
                         <select className="p-2 w-full border rounded-lg focus:ring focus:ring-gray-300">
-                            <option value="$10">$10</option>
-                            <option value="$25">$25</option>
-                            <option value="$50">$50</option>
-                            <option value="$100">$100</option>
+                            <option value="Rp10000">Rp10000</option>
+                            <option value="Rp25000">Rp25000</option>
+                            <option value="Rp50000">Rp50000</option>
+                            <option value="Rp100000">Rp100000</option>
                         </select>
-                        <button className="mt-4 bg-black text-white px-4 py-2 rounded-lg w-full hover:bg-gray-800 transition">Buy Now</button>
+                        <Link href={"/seller_profile"} className="mt-4 bg-black text-white px-8 py-4 rounded-md  w-full hover:bg-gray-800 transition">Buy Now</Link>
                     </div>
                 </div>
             </div>

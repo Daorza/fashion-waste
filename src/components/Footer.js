@@ -19,6 +19,12 @@ export default function Footer() {
                             </svg>
                             Instagram
                         </Link>
+                        <Link href="https://www.tiktok.com/@ifest.uajy" target="_blank" className="hover:underline hover:font-medium flex">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-4 mt-1 mr-2">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                            </svg>
+                            TikTok
+                        </Link>
                         <Link href="https://www.youtube.com/@ifestuajy" target="_blank" className="hover:underline hover:font-medium flex">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-4 mt-1 mr-2">
                                 <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />

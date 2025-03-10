@@ -191,7 +191,7 @@ export default function Marketplace() {
                                   Clear Filters
                               </button>
             </div>
-              <div className="px-4 py-2 mt-8 rounded-md shadow-md ">
+              <div className="px-4 py-2 mt-8 mx-2 rounded-md shadow-md bg-white">
                   <p className="text-lg font-semibold capitalize">take a step</p>
                   <div className="text-sm mt-2">
                       Start to sell your second-hand clothing at <span className="font-semibold">Fastainable!</span>

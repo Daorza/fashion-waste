@@ -15,25 +15,32 @@ export default function OrdersReturns() {
             <div className="container mx-auto px-4 py-8">
                 <h1 className="text-2xl font-bold text-black mb-6">Your Orders</h1>
 
-                <div className="bg-gray-100 rounded-xl p-6 mb-8 border border-gray-200">
-                    <h2 className="font-bold text-lg mb-4 text-black">Recent Orders</h2>
+                <div className="bg-white rounded-xl p-6 mb-8 border border-gray-200">
+                    <h2 className="font-bold text-lg mb-4 py-4 text-black">Recent Orders</h2>
                     <div className="space-y-4">
-                        <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-300">
-                            <div className="flex justify-between">
-                                <div>
-                                    <p className="text-gray-600">Order #12345</p>
-                                    <p className="font-bold text-black">Status: <span className="text-green-500">Shipped</span></p>
-                                </div>
-                                <Link href="#" className="text-blue-600 font-semibold hover:underline">View Details</Link>
+                        {/* Order #12345 */}
+                        <div className="bg-slate-100 p-4 rounded-lg shadow-sm border border-gray-300">
+                            <p className="text-gray-600">Order #12345</p>
+                            <p className="font-bold text-black">Status: <span className="text-green-500">Shipped</span></p>
+                            {/* Detail Pesanan */}
+                            <div className="mt-2 text-sm text-gray-700">
+                                <p><strong>Item:</strong> Blue Denim Jacket</p>
+                                <p><strong>Quantity:</strong> 1</p>
+                                <p><strong>Price:</strong> Rp45.00</p>
+                                <p><strong>Estimated Delivery:</strong> March 12, 2025</p>
                             </div>
                         </div>
-                        <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-300">
-                            <div className="flex justify-between">
-                                <div>
-                                    <p className="text-gray-600">Order #12346</p>
-                                    <p className="font-bold text-black">Status: <span className="text-yellow-500">Processing</span></p>
-                                </div>
-                                <Link href="#" className="text-blue-600 font-semibold hover:underline">View Details</Link>
+
+                        {/* Order #12346 */}
+                        <div className="bg-slate-100 p-4 rounded-lg shadow-sm border border-gray-300">
+                            <p className="text-gray-600">Order #12346</p>
+                            <p className="font-bold text-black">Status: <span className="text-yellow-500">Processing</span></p>
+                            {/* Detail Pesanan */}
+                            <div className="mt-2 text-sm text-gray-700">
+                                <p><strong>Item:</strong> Black Leather Boots</p>
+                                <p><strong>Quantity:</strong> 2</p>
+                                <p><strong>Price:</strong> Rp120.00</p>
+                                <p><strong>Estimated Delivery:</strong> March 15, 2025</p>
                             </div>
                         </div>
                     </div>
@@ -41,8 +48,10 @@ export default function OrdersReturns() {
 
                 <div className="bg-white rounded-xl p-6 border border-gray-200">
                     <h2 className="font-bold text-lg text-black mb-4">Returns & Refunds</h2>
-                    <p className="text-gray-600 mb-4">Need to return an item? Select the order and follow the instructions.</p>
-                    <Link href="#" className="inline-block bg-black text-white px-4 py-2 rounded-lg font-semibold hover:bg-gray-800 transition">Start a Return</Link>
+                    <p className="text-gray-600 mb-4">Need to return an item? Try to contact our customer service and follow the instructions.</p>
+                    <Link href="/about/#terms" className="inline-block text-base text-graphite underline px-2 rounded-lg font-medium hover:font-semibold transition tracking-wider">
+                        Ask For Return
+                    </Link>
                 </div>
             </div>
         </main>

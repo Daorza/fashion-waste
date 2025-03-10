@@ -23,25 +23,25 @@ export default function Validate() {
                         <div className="border p-4 rounded-lg shadow-sm bg-gray-50">
                             <h2 className="text-lg font-semibold text-black">Your Item</h2>
                             <Image src="/models/models6.jpg" width={500} height={500} alt="Your Item" className="mx-auto mt-2 h-96 object-cover rounded-md" />
-                            <p className="mt-2 text-gray-700">Item Name: Black T-shirt</p>
-                            <p className="text-gray-700">Category: Tops</p>
-                            <p className="text-gray-700">Condition: Like New</p>
+                            <p className="mt-2 text-gray-700">Item Name: Tom Hilfiger Set</p>
+                            <p className="text-gray-700">Category: Set</p>
+                            <p className="text-gray-700">Condition: Gently Used</p>
                         </div>
                         
                         {/* Requested Item */}
                         <div className="border p-4 rounded-lg shadow-sm bg-gray-50">
                             <h2 className="text-lg font-semibold text-black">Trade With</h2>
-                            <Image src="/models/models7.jpg" width={500} height={500} alt="Requested Item" className="mx-auto mt-2 h-96 object-cover rounded-md" />
-                            <p className="mt-2 text-gray-700">Item Name: Denim Jacket</p>
-                            <p className="text-gray-700">Category: Outerwear</p>
-                            <p className="text-gray-700">Condition: Gently Used</p>
+                            <Image src="/models/models3.jpg" width={500} height={500} alt="Requested Item" className="mx-auto mt-2 h-96 object-cover rounded-md" />
+                            <p className="mt-2 text-gray-700">Item Name: Pink Prom Dress</p>
+                            <p className="text-gray-700">Category: Dress</p>
+                            <p className="text-gray-700">Condition: Like New</p>
                         </div>
                     </div>
 
                     <div className="mt-6 flex justify-center space-x-4">
-                        <button className="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition">Accept Trade</button>
-                        <button className="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition">Decline</button>
-                    </div>
+                        <button className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition">Accept Trade</button>
+                        <button className="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition">Decline</button>
+                </div>
                 </div>
             </div>
         </main>

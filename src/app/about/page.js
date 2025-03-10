@@ -62,19 +62,19 @@ export default function About() {
                             <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border shadow-md hover:shadow-lg">
                                 <Image width={1000} height={1000} src="/images/nugi.jpeg" alt="Nugroho Nur Cahyo" className="w-full h-full object-cover" />
                             </div>
-                            <h3 className="text-md font-semibold text-black">Nugroho Nur Cahyo</h3>
+                            <h3 className="text-md font-semibold text-black tracking-wide">Nugroho Nur Cahyo</h3>
                         </div>
                         <div className="text-center">
                             <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border shadow-md hover:shadow-lg">
                                 <Image width={1000} height={1000} src="/images/reza.jpeg" alt="Muhammad Reza Hafizzi" className="w-full h-full object-cover" />
                             </div>
-                            <h3 className="text-md font-semibold text-black">Muhammad Reza Hafizzi</h3>
+                            <h3 className="text-md font-semibold text-black tracking-wide">Muhammad Reza Hafizzi</h3>
                         </div>
                         <div className="text-center">
                             <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border shadow-md hover:shadow-lg">
                                 <Image width={1000} height={1000} src="/images/naufal.jpg" alt="Naufal Bintang Pradana H" className="w-full h-full object-cover" />
                             </div>
-                            <h3 className="text-md font-semibold text-black">Naufal Bintanga Pradana H</h3>
+                            <h3 className="text-md font-semibold text-black tracking-wide">Naufal Bintanga Pradana H</h3>
                         </div>
                     </div>
                 </div>
@@ -96,6 +96,8 @@ export default function About() {
                             <li>Users must provide accurate information when listing items.</li>
                             <li>Any fraudulent activity will result in account suspension.</li>
                             <li>Transactions made outside the platform are not protected by our policies.</li>
+                            <hr className="h-px mx-2 my-4" />
+                            <p className="text-sm text-justify">📝 If you need to <span className="font-semibold">return an item</span> because of some defect on the item or having a problem with the shipments, please try to reach our customer service via social media on the footer section. Thank you! 😉</p>
                         </ul>
                     </div>
                     <div id="privacy" className="p-6 border rounded-lg shadow-sm hover:shadow-md transition bg-slate-50 text-left">
@@ -107,7 +109,7 @@ export default function About() {
                             <li>You can request account deletion and data removal at any time.</li>
                         </ul>
                         <hr className="h-px mx-2 my-4" />
-                        <p className="text-sm text-justify">🤔 If you want to change your password or found something in our website, please try to reach our customer service via social media on the footer section. Thank you! 😉</p>
+                        <p className="text-sm text-justify">🤔 If you want to <span className="font-semibold">change your password</span> or found something in our website, please try to reach our customer service via social media on the footer section. Thank you! 😉</p>
                     </div>
                 </section>
             </div>

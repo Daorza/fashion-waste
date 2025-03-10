@@ -90,9 +90,9 @@ export default function ProductDetail() {
                     <p>You can trade your own clothes with this one. Fill the form on the link below to start the trade.</p>
                     <p>After filling the form, you can wait for verification and monitor it on your profile.</p>
                     <hr className="h-px my-2" />
-                    <a href="" className="pt-4 font-medium text-graphite underline tracking-wider text-sm capitalize hover:font-semibold">
+                    <Link href={`/marketplace/trade?id=${product.id}`}  className="pt-4 font-medium text-graphite underline tracking-wider text-sm capitalize hover:font-semibold">
                         Fill the form
-                    </a>
+                    </Link>
                 </div>
 
                 {/* Rekomendasi Produk */}
