@@ -1,9 +1,9 @@
 export default function About() {
     return (
         <main className="flex items-center justify-center py-12 bg-gray-100">
-            <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-2xl text-center">
+            <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-4xl text-center">
                 <h1 className="text-3xl font-bold text-black mb-4 text-center">About Us</h1>
-                <p className="text-gray-600 mb-6 text-center max-w-2xl mx-auto">
+                <p className="text-gray-600 mb-6 text-center max-w-4xl mx-auto">
                     Welcome to our platform! We are committed to redefining the way people trade, purchase, and interact.  
                     Our mission is to foster a community-driven marketplace that promotes sustainability, seamless transactions,  
                     and an enjoyable shopping experience.

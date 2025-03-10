@@ -50,45 +50,6 @@
       "fit": "Loose",
       "seller": "Prince_Warlock",
       "description": "Premium-quality fabric, soft and breathable for all-day comfort. Designed with precision stitching for durability and a stylish look. Wrinkle-resistant, fade-resistant, and easy to mix and match for any occasion."
-    },
-    {
-      "id": "5",
-      "name": "Wide extra glasses",
-      "price": "Rp65.000",
-      "image": "/models/models5.jpg",
-      "category": "Accessories",
-      "size": "Standard",
-      "material": "Plastic",
-      "color": ["Hitam", "Putih"],
-      "fit": "Slim",
-      "seller": "Houser898",
-      "description": "Premium-quality fabric, soft and breathable for all-day comfort. Designed with precision stitching for durability and a stylish look. Wrinkle-resistant, fade-resistant, and easy to mix and match for any occasion."
-    },
-    {
-      "id": "6",
-      "name": "Tommy Hilfiger Set",
-      "price": "Rp475.000",
-      "image": "/models/models6.jpg",
-      "category": "Women",
-      "size": "L",
-      "material": "Denim",
-      "color": ["Biru", "Hitam"],
-      "fit": "Regular",
-      "seller": "Georgegigi",
-      "description": "Premium-quality fabric, soft and breathable for all-day comfort. Designed with precision stitching for durability and a stylish look. Wrinkle-resistant, fade-resistant, and easy to mix and match for any occasion."
-    },
-    {
-      "id": "7",
-      "name": "White Blouse",
-      "price": "Rp285.000",
-      "image": "/models/runway1.jpg",
-      "category": "Women",
-      "size": "M",
-      "material": "Poliester",
-      "color": ["Putih"],
-      "fit": "Regular",
-      "seller": "Antadamuarez",
-      "description": "Premium-quality fabric, soft and breathable for all-day comfort. Designed with precision stitching for durability and a stylish look. Wrinkle-resistant, fade-resistant, and easy to mix and match for any occasion."
     }
   ]
   

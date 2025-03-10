@@ -15,7 +15,7 @@ const Home = () => {
         fetchData();
     }, []);
     const fetchData = async () =>{
-        const res = await axios.get('/data/product.json');
+        const res = await axios.get('/data/homepage.json');
         setProducts(res.data);
     }
     return (
@@ -45,7 +45,7 @@ const Home = () => {
                                 Sustainable | Reduceable | Durable
                             </h2>
                             <Link
-                                href="/"
+                                href="/marketplace"
                                 className="px-8 py-2 bg-graphite text-white text-md rounded-md shadow font-semibold uppercase tracking-widest w-fit animate-fade-up"
                             >
                                 See All Products
@@ -144,11 +144,11 @@ const Home = () => {
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                                 <div className="flex justify-center">
                                     <Image 
-                                        src={"/models/runway1.jpg"} 
+                                        src={"/images/blog4.jpg"} 
                                         width={1000} 
                                         height={1000} 
                                         alt="runway1" 
-                                        className="w-full sm:w-80 object-center rounded-md shadow"
+                                        className="w-full sm:w-80 object-center object-cover rounded-md shadow"
                                     />
                                 </div>
                                 <div className="md:col-span-2">
