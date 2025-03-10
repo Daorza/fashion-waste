@@ -32,7 +32,7 @@ export default function BlogDetail() {
             <p className="text-gray-500 text-sm">{post.writer}</p>
         </div>
         <hr className="my-4" />
-        <p className="text-gray-700">{post.content}</p>
+        <p className="text-gray-600 text-sm px-2">{post.description}</p>
       </div>
     </div>
   );
