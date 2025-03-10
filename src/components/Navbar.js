@@ -7,6 +7,7 @@ import Image from "next/image";
 import Routes from "../routes/routes";
 import axios from "axios"
 import MobileSidebar from "./particular_nav/MobileSidebar";
+import DesktopNavLink from "./particular_nav/DesktopNavLink";
 import SearchForm from "./search/SearchForm";
 import CartContent from "./particular_nav/CartContent";
 
@@ -18,6 +19,7 @@ export default function Navbar() {
   const [products, setProducts] = useState([])
   const [query, setQuery] = useState("")
   const [isCartOpen, setIsCartOpen] = useState(false);
+  const [userEmail, setUserEmail] = useState(null);
   const [filteredProduct, setFilteredProduct] = useState([])
   const pathname = usePathname();
 
@@ -39,6 +41,15 @@ export default function Navbar() {
     }
     fetchProducts()
   }, [])
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const data = localStorage.getItem("userEmail");
+      if (data) {
+        setUserEmail(data);
+      }
+    }
+  }, []);
+
 
   // Filter produk setiap kali query berubah
   useEffect(() => {
@@ -159,15 +170,15 @@ export default function Navbar() {
           <div className="flex justify-center gap-12 items-center">
             <Link href="/" className="font-bold text-2xl font-sans tracking-widest">FASTAINABLE</Link>
             <div className="md:flex hidden justify-start items-center gap-8 mt-1 font-extralight tracking-widest text-sm uppercase">
-              <Link href="/marketplace" onClick={()=>setDefault()}>Shop</Link>
-              <Link href="/blog" onClick={()=>setDefault()}>Blog</Link>
-              <Link href="/about" onClick={()=>setDefault()}>About</Link>
+            <DesktopNavLink text="shop" href="/marketplace" isActive={pathname === "/marketplace"} setDefault={() => setDefault()} />
+            <DesktopNavLink text="blog" href="/blog" isActive={pathname === "/blog"} setDefault={() => setDefault()} />
+            <DesktopNavLink text="about" href="/about" isActive={pathname === "/about"} setDefault={() => setDefault()} />
             </div>
           </div>
 
           {/* Icons */}
           <div className="flex justify-end md:gap-6 gap-4">
-            <Link href="/seller_profile" className="md:block hidden cursor-pointer">
+            <Link href={`${userEmail != null?"/seller_profile":"/auth/login"}`} className="md:block hidden cursor-pointer">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
               </svg>
