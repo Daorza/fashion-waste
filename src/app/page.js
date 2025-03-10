@@ -11,7 +11,6 @@ const Home = () => {
     const [isAnimated, setIsAnimated] = useState(false);
     const [product, setProducts] = useState([]);
     useEffect(() => {
-        // Trigger animasi setelah komponen dimuat
         setIsAnimated(true);
         fetchData();
     }, []);

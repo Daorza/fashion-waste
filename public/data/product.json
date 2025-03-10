@@ -4,11 +4,13 @@
       "name": "Oversize T-shirt",
       "price": "Rp50.000",
       "image": "/models/models1.jpg",
-      "category": "Oversize",
+      "category": "Men",
       "size": "L",
       "material": "Katun",
       "color": "Hitam",
-      "fit": "Regular"
+      "fit": "Regular",
+      "seller": "Anaconda37",
+      "description": "Premium-quality fabric, soft and breathable for all-day comfort. Designed with precision stitching for durability and a stylish look. Wrinkle-resistant, fade-resistant, and easy to mix and match for any occasion."
     },
     {
       "id": "2",
@@ -17,31 +19,37 @@
       "image": "/models/models2.jpg",
       "category": "Polo",
       "size": "M",
-      "material": "Poliester",
+      "material": "Women",
       "color": "Biru",
-      "fit": "Slim"
+      "fit": "Slim",
+      "seller": "Anaconda37",
+      "description": "Premium-quality fabric, soft and breathable for all-day comfort. Designed with precision stitching for durability and a stylish look. Wrinkle-resistant, fade-resistant, and easy to mix and match for any occasion."
     },
     {
       "id": "3",
       "name": "Denim Pants",
       "price": "Rp115.000",
       "image": "/models/models3.jpg",
-      "category": "Denim",
+      "category": "Accessories",
       "size": "XL",
       "material": "Denim",
       "color": "Biru",
-      "fit": "Loose"
+      "fit": "Loose",
+      "seller": "Anaconda37",
+      "description": "Premium-quality fabric, soft and breathable for all-day comfort. Designed with precision stitching for durability and a stylish look. Wrinkle-resistant, fade-resistant, and easy to mix and match for any occasion."
     },
     {
       "id": "4",
       "name": "Oversize T-shirt",
       "price": "Rp50.000",
       "image": "/models/models4.jpg",
-      "category": "Oversize",
+      "category": "Men",
       "size": "S",
       "material": "Katun",
       "color": "Putih",
-      "fit": "Regular"
+      "fit": "Regular",
+      "seller": "Anaconda37",
+      "description": "Premium-quality fabric, soft and breathable for all-day comfort. Designed with precision stitching for durability and a stylish look. Wrinkle-resistant, fade-resistant, and easy to mix and match for any occasion."
     },
     {
       "id": "5",
@@ -50,20 +58,24 @@
       "image": "/models/models5.jpg",
       "category": "Polo",
       "size": "L",
-      "material": "Poliester",
+      "material": "Women",
       "color": "Hitam",
-      "fit": "Slim"
+      "fit": "Slim",
+      "seller": "Anaconda37",
+      "description": "Premium-quality fabric, soft and breathable for all-day comfort. Designed with precision stitching for durability and a stylish look. Wrinkle-resistant, fade-resistant, and easy to mix and match for any occasion."
     },
     {
       "id": "6",
       "name": "Denim Pants",
       "price": "Rp115.000",
       "image": "/models/models6.jpg",
-      "category": "Denim",
+      "category": "Accessories",
       "size": "M",
       "material": "Denim",
       "color": "Biru",
-      "fit": "Regular"
+      "fit": "Regular",
+      "seller": "Anaconda37",
+      "description": "Premium-quality fabric, soft and breathable for all-day comfort. Designed with precision stitching for durability and a stylish look. Wrinkle-resistant, fade-resistant, and easy to mix and match for any occasion."
     }
   ]
   

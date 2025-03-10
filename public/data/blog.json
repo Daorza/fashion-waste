@@ -1,5 +1,42 @@
 [
     {
-        "id": "1"
+        "id": "1",
+        "title": "Stunning Looks from 2025 PFW",
+        "description": "test",
+        "writer": "Ivan Montana",
+        "month": "March",
+        "day": "3rd",
+        "year": "2025",
+        "imageMain": "/images/blog4.jpg"
+    },
+    {
+        "id": "2",
+        "title": "Fashion In the future",
+        "description": "test",
+        "writer": "Selene Marthana",
+        "month": "February",
+        "day": "3rd",
+        "year": "2025",
+        "imageMain": "/images/blog1.jpg"
+    },
+    {
+        "id": "3",
+        "title": "What is fashion waste?",
+        "description": "test",
+        "writer": "Irwandi Putra",
+        "month": "February",
+        "day": "1st",
+        "year": "2025",
+        "imageMain": "/images/blog2.jpg"
+    },
+    {
+        "id": "4",
+        "title": "You should try this outfit style",
+        "description": "test",
+        "writer": "Ivan Montana",
+        "month": "January",
+        "day": "14th",
+        "year": "2025",
+        "imageMain": "/images/blog3.jpg"
     }
 ]

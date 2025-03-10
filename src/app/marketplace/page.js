@@ -5,8 +5,8 @@ import Link from "next/link";
 import axios from "axios";
 
 const filterOptions = {
-  category: ["Oversize", "Polo", "Denim"],
-  size: ["S", "M", "L", "XL"],
+  category: ["Men", "Women", "accessories"],
+  size: ["S", "M", "L", "XL", "2XL"],
   material: ["Katun", "Denim", "Poliester"],
   color: ["Hitam", "Putih", "Biru"],
   fit: ["Slim", "Regular", "Loose"],
@@ -22,6 +22,7 @@ export default function Marketplace() {
     color: [],
     fit: [],
   });
+
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [products, setProducts] = useState([]);
 
@@ -30,7 +31,6 @@ export default function Marketplace() {
     setProducts(res.data)
   }
   
-
   useEffect(() => {
     fetchAPI();
   }, [])
@@ -214,10 +214,10 @@ export default function Marketplace() {
                               alt={product.name}
                               width={300} 
                               height={400}
-                              className="w-full h-48 md:h-max object-cover object-top"
+                              className="w-full h-48 md:h-max object-cover object-top p-4"
                           />
                           <div className="p-4">
-                              <h3 className="font-medium h-12 overflow-clip">{product.name}</h3>
+                              <h3 className="font-semibold capitalize h-12 overflow-clip">{product.name}</h3>
                               <p className="text-gray-600 h-8">{product.price}</p>
                           </div>
                           </Link>

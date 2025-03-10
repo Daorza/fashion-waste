@@ -1,9 +1,9 @@
-import Navbar from "../components/Navbar";
+import Navbar from "@/components/Navbar";
 import Footer  from "@/components/Footer";
 import "./globals.css";
 export const metadata = {
-    title: "Fashion Waste",
-    description: "Platform pengurangan limbah pakaian.",
+    title: "Fastainable",
+    description: "Fashion Waste Soution Platform.",
 };
 
 export default function RootLayout({ children }) {

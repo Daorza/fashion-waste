@@ -32,15 +32,15 @@ export default function Profile() {
                             className="w-20 h-20 sm:w-24 sm:h-24 rounded-full border-4 border-gray-300 object-cover"
                         />
                     </div>
-                    <div className="text-center sm:text-left">
+                    <div className="ml-4 text-center sm:text-left">
                         <h1 className="text-2xl sm:text-3xl font-bold text-black">arixa</h1>
-                        <div className="flex justify-center sm:justify-start mt-1">
-                            <span className="bg-gradient-to-r from-yellow-400 to-orange-400 text-white px-4 py-1 rounded-full text-sm font-medium shadow-md flex items-center space-x-1 border border-yellow-500">
+                        <div className="flex justify-center sm:justify-start mt-2">
+                            <span className="bg-gradient-to-r from-yellow-400 to-orange-400 text-graphite px-4 py-2 rounded-full text-sm tracking-wide font-medium shadow-md flex items-center space-x-1 border border-yellow-600">
                                 <span>⭐</span>
                                 <span>{points} points to spend</span>
                             </span>
                         </div>
-                        <button className="mt-3 px-4 py-2 bg-black text-white rounded-lg hover:bg-blue-600 transition">
+                        <button className="mt-4 px-2 text-sm  text-graphite hover:font-semibold underline transition">
                             Edit Profile
                         </button>
                     </div>
@@ -58,8 +58,8 @@ export default function Profile() {
                 {/* Recent Activities */}
                 <div className="bg-white rounded-xl p-6 border border-gray-200 mb-8 shadow-sm">
                     <h2 className="font-bold text-lg text-black mb-4">Recent Activities</h2>
-                    <ul className="space-y-2 text-gray-600">
-                        <li>✅ Purchased "Wireless Mouse" - Earned 10 points</li>
+                    <ul className="space-y-2 text-gray-600 ml-2">
+                        <li>🪙 Purchased "Wireless Mouse" - Earned 10 points</li>
                         <li>✅ Referred a friend - Earned 15 points</li>
                         <li>🔍 Validated account - Earned 5 points</li>
                     </ul>
@@ -68,12 +68,12 @@ export default function Profile() {
                 {/* Security Settings */}
                 <div className="bg-white rounded-xl p-6 border border-gray-200 shadow-sm">
                     <h2 className="font-bold text-lg text-black mb-2">Security Settings</h2>
-                    <p className="text-gray-600 max-w-md mb-4">
+                    <p className="text-gray-600 max-w-md mb-4 ml-2">
                         Manage your account security and privacy settings.
                     </p>
-                    <button className="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition">
+                    <Link href="/about/#privacy" className="px-4 py-2 ml-2 bg-red-500 text-white text-sm rounded-lg hover:bg-red-600 transition">
                         Change Password
-                    </button>
+                    </Link>
                 </div>
             </div>
         </main>

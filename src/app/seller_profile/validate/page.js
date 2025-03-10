@@ -14,42 +14,34 @@ export default function Validate() {
             </nav>
             
             <div className="flex items-center justify-center py-12 bg-gray-100">
-                <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md text-center">
+                <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-2xl text-center">
                     <h1 className="text-2xl font-bold text-black mb-4">Validate Your Trade</h1>
-                    <p className="text-gray-600 mb-6">Confirm the item you want to trade in our clothing exchange program.</p>
+                    <p className="text-gray-600 mb-6">Review and confirm if you want to proceed with the trade.</p>
                     
-                    <form>
-                        <div className="mb-4 text-left">
-                            <label className="block text-sm font-medium text-gray-700">Item Name</label>
-                            <input type="text" className="mt-1 p-2 w-full border rounded-lg focus:ring focus:ring-gray-300" placeholder="Enter item name" />
+                    <div className="grid grid-cols-2 gap-4">
+                        {/* Your Item */}
+                        <div className="border p-4 rounded-lg shadow-sm bg-gray-50">
+                            <h2 className="text-lg font-semibold text-black">Your Item</h2>
+                            <Image src="/models/models6.jpg" width={500} height={500} alt="Your Item" className="mx-auto mt-2 h-96 object-cover rounded-md" />
+                            <p className="mt-2 text-gray-700">Item Name: Black T-shirt</p>
+                            <p className="text-gray-700">Category: Tops</p>
+                            <p className="text-gray-700">Condition: Like New</p>
                         </div>
-                        <div className="mb-4 text-left">
-                            <label className="block text-sm font-medium text-gray-700">Category</label>
-                            <select className="mt-1 p-2 w-full border rounded-lg focus:ring focus:ring-gray-300">
-                                <option value="">Select category</option>
-                                <option value="tops">Tops</option>
-                                <option value="bottoms">Bottoms</option>
-                                <option value="dresses">Dresses</option>
-                                <option value="outerwear">Outerwear</option>
-                                <option value="accessories">Accessories</option>
-                            </select>
+                        
+                        {/* Requested Item */}
+                        <div className="border p-4 rounded-lg shadow-sm bg-gray-50">
+                            <h2 className="text-lg font-semibold text-black">Trade With</h2>
+                            <Image src="/models/models7.jpg" width={500} height={500} alt="Requested Item" className="mx-auto mt-2 h-96 object-cover rounded-md" />
+                            <p className="mt-2 text-gray-700">Item Name: Denim Jacket</p>
+                            <p className="text-gray-700">Category: Outerwear</p>
+                            <p className="text-gray-700">Condition: Gently Used</p>
                         </div>
-                        <div className="mb-4 text-left">
-                            <label className="block text-sm font-medium text-gray-700">Condition</label>
-                            <select className="mt-1 p-2 w-full border rounded-lg focus:ring focus:ring-gray-300">
-                                <option value="">Select condition</option>
-                                <option value="new">New with Tags</option>
-                                <option value="like-new">Like New</option>
-                                <option value="gently-used">Gently Used</option>
-                                <option value="worn">Worn but Usable</option>
-                            </select>
-                        </div>
-                        <div className="mb-4 text-left">
-                            <label className="block text-sm font-medium text-gray-700">Upload Image</label>
-                            <input type="file" className="mt-1 p-2 w-full border rounded-lg focus:ring focus:ring-gray-300" />
-                        </div>
-                        <button type="submit" className="bg-black text-white px-4 py-2 rounded-lg w-full hover:bg-gray-800 transition">Submit Trade</button>
-                    </form>
+                    </div>
+
+                    <div className="mt-6 flex justify-center space-x-4">
+                        <button className="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition">Accept Trade</button>
+                        <button className="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition">Decline</button>
+                    </div>
                 </div>
             </div>
         </main>

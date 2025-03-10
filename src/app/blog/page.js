@@ -1,11 +1,25 @@
+"use client";
+import { useState, useEffect } from "react";
+import Link from "next/link";
 import Image from "next/image";
+import axios from "axios";
 
 export default function Blog() {
-    const posts = [
-        { id: 1, title: "The Future of Fashion", excerpt: "Exploring sustainable and tech-driven trends.", image: "/images/blog1.jpg" },
-        { id: 2, title: "Minimalist Wardrobe", excerpt: "How to build a stylish, clutter-free closet.", image: "/images/blog2.jpg" },
-        { id: 3, title: "Streetwear Evolution", excerpt: "The rise of urban fashion and its impact.", image: "/images/blog3.jpg" },
-    ];
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      const res = await axios.get("/data/blog.json");
+      setPosts(res.data);
+    };
+    fetchBlogs();
+  }, []);
+
+    // const posts = [
+    //     { id: 1, title: "The Future of Fashion", excerpt: "Exploring sustainable and tech-driven trends.", image: "/images/blog1.jpg" },
+    //     { id: 2, title: "Minimalist Wardrobe", excerpt: "How to build a stylish, clutter-free closet.", image: "/images/blog2.jpg" },
+    //     { id: 3, title: "Streetwear Evolution", excerpt: "The rise of urban fashion and its impact.", image: "/images/blog3.jpg" },
+    // ];
 
     return (
         <main className="bg-gray-100 min-h-screen py-12 px-6 sm:px-12">
@@ -16,14 +30,17 @@ export default function Blog() {
             
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
                 {posts.map((post) => (
-                    <div key={post.id} className="bg-white shadow-lg rounded-lg overflow-hidden transition hover:shadow-xl">
-                        <Image src={post.image} width={400} height={250} alt={post.title} className="w-full h-48 object-cover" />
+                    <Link key={post.id} href={`/blog/${post.id}`} className="bg-white shadow-lg rounded-lg overflow-hidden transition hover:shadow-xl">
+                        <Image src={post.imageMain} width={1000} height={1000} alt={post.title} className="w-full h-48 object-cover" />
                         <div className="p-6">
-                            <h2 className="text-xl font-bold text-black mb-2">{post.title}</h2>
-                            <p className="text-gray-600 mb-4">{post.excerpt}</p>
-                            <button className="text-black font-semibold hover:underline">Read More →</button>
+                            <h2 className="text-xl font-bold text-black mb-2 capitalize">{post.title}</h2>
+                            <div className="flex justify-between">
+                                <p className="text-gray-500 text-sm">{post.month} <sup>{post.day}</sup> {post.year}</p>
+                                <p className="text-gray-500 text-sm">{post.writer}</p>
+                            </div>
+                            <button className="mt-4 text-black font-semibold hover:underline">Read More →</button>
                         </div>
-                    </div>
+                    </Link>
                 ))}
             </div>
         </main>
