@@ -59,24 +59,21 @@ export default function About() {
                     <div className="grid md:grid-cols-3 gap-6">
                         <div className="text-center">
                             <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border shadow-md hover:shadow-lg">
-                                <img src="/images/dummy_photo.jpg" alt="Nugroho Nur Cahyo" className="w-full h-full object-cover" />
+                                <img src="/images/nugi.jpeg" alt="Nugroho Nur Cahyo" className="w-full h-full object-cover" />
                             </div>
                             <h3 className="text-md font-semibold text-black">Nugroho Nur Cahyo</h3>
-                            <p className="text-gray-600">Role / Position</p>
                         </div>
                         <div className="text-center">
                             <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border shadow-md hover:shadow-lg">
-                                <img src="/images/dummy_photo.jpg" alt="Muhammad Reza Hafizzi" className="w-full h-full object-cover" />
+                                <img src="/images/reza.jpeg" alt="Muhammad Reza Hafizzi" className="w-full h-full object-cover" />
                             </div>
                             <h3 className="text-md font-semibold text-black">Muhammad Reza Hafizzi</h3>
-                            <p className="text-gray-600">Role / Position</p>
                         </div>
                         <div className="text-center">
                             <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border shadow-md hover:shadow-lg">
-                                <img src="/images/dummy_photo.jpg" alt="Naufal Bintanga Pradana H" className="w-full h-full object-cover" />
+                                <img src="/images/naufal.jpg" alt="Naufal Bintang Pradana H" className="w-full h-full object-cover" />
                             </div>
                             <h3 className="text-md font-semibold text-black">Naufal Bintanga Pradana H</h3>
-                            <p className="text-gray-600">Role / Position</p>
                         </div>
                     </div>
                 </div>

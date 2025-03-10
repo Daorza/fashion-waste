@@ -18,7 +18,6 @@ export default function Checkout() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        alert("Order confirmed!");
     };
 
     return (
