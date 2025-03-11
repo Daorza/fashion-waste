@@ -29,16 +29,16 @@ export default function Checkout() {
                     <h2 className="text-xl font-semibold mb-4">Order Summary</h2>
                     <div className="flex justify-between mb-2">
                         <span>Product 1</span>
-                        <span>$50</span>
+                        <span>Rp50000</span>
                     </div>
                     <div className="flex justify-between mb-2">
                         <span>Product 2</span>
-                        <span>$30</span>
+                        <span>Rp30000</span>
                     </div>
                     <hr className="my-2" />
                     <div className="flex justify-between font-semibold text-lg">
                         <span>Total</span>
-                        <span>$80</span>
+                        <span>Rp80000</span>
                     </div>
                 </div>
 

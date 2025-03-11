@@ -22,7 +22,7 @@ export default function OrdersReturns() {
                         <div className="bg-slate-100 p-4 rounded-lg shadow-sm border border-gray-300">
                             <p className="text-gray-600">Order #12345</p>
                             <p className="font-bold text-black">Status: <span className="text-green-500">Shipped</span></p>
-\
+
                             <div className="mt-2 text-sm text-gray-700">
                                 <p><strong>Item:</strong> Blue Denim Jacket</p>
                                 <p><strong>Quantity:</strong> 1</p>
