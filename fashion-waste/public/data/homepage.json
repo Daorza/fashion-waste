@@ -1,0 +1,55 @@
+[
+    {
+      "id": "1",
+      "name": "Futuristic Glasses",
+      "price": "Rp70.000",
+      "image": "/models/models1.jpg",
+      "category": "Accessories",
+      "size": "Standard",
+      "material": "Plastic",
+      "color": ["Hitam", "Putih", "Cokelat"],
+      "fit": "Regular",
+      "seller": "Anaconda37",
+      "description": "Premium-quality fabric, soft and breathable for all-day comfort. Designed with precision stitching for durability and a stylish look. Wrinkle-resistant, fade-resistant, and easy to mix and match for any occasion."
+    },
+    {
+      "id": "2",
+      "name": "Black Tuxedo",
+      "price": "Rp205.000",
+      "image": "/models/models2.jpg",
+      "category": "Men",
+      "size": "2XL",
+      "material": "Katun",
+      "color": ["Biru", "Hitam"],
+      "fit": "Slim",
+      "seller": "Meideliene",
+      "description": "Premium-quality fabric, soft and breathable for all-day comfort. Designed with precision stitching for durability and a stylish look. Wrinkle-resistant, fade-resistant, and easy to mix and match for any occasion."
+    },
+    {
+      "id": "3",
+      "name": "Pink Prom Dress",
+      "price": "Rp132.000",
+      "image": "/models/models3.jpg",
+      "category": "Women",
+      "size": "S",
+      "material": "Poliester",
+      "color": ["Pink"],
+      "fit": "Slim",
+      "seller": "Martha_88",
+      "description": "Premium-quality fabric, soft and breathable for all-day comfort. Designed with precision stitching for durability and a stylish look. Wrinkle-resistant, fade-resistant, and easy to mix and match for any occasion."
+    },
+    {
+      "id": "4",
+      "name": "Tight Waist Brown Pants",
+      "price": "Rp200.000",
+      "image": "/models/models4.jpg",
+      "category": "Men",
+      "size": "S",
+      "material": "Katun",
+      "color": ["Cokelat", "Hitam"],
+      "fit": "Loose",
+      "seller": "Prince_Warlock",
+      "description": "Premium-quality fabric, soft and breathable for all-day comfort. Designed with precision stitching for durability and a stylish look. Wrinkle-resistant, fade-resistant, and easy to mix and match for any occasion."
+    }
+  ]
+  
